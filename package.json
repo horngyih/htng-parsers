@@ -1,0 +1,17 @@
+{
+  "name": "htng-parsers",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/logReader.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xml-js": "^1.5.1"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
