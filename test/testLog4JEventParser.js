@@ -10,8 +10,8 @@ const _PROJECT_DIR = path.resolve(__dirname,"..");
 const _SRC_DIR = path.resolve(_PROJECT_DIR,"src");
 const _SAMPLES_DIR = path.resolve(_PROJECT_DIR,"samples");
 
-const LogFileCompactor = require(path.resolve(_SRC_DIR,"logFileCompactor"));
-const Log4JEventParser = require(path.resolve(_SRC_DIR, "log4jEventParser"))
+const LogFileCompactor = require(path.resolve(_SRC_DIR,"utils","logFileCompactor"));
+const Log4JEventParser = require(path.resolve(_SRC_DIR,"utils","log4jEventParser"))
 
 describe( "Test Log4j Event Parser", function(){
     var targetFile = path.resolve(_SAMPLES_DIR,"logfileCompactorSample.txt");

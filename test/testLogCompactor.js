@@ -7,8 +7,8 @@ const _PROJECT_DIR = path.resolve(__dirname,"..");
 const _SRC_DIR = path.resolve(_PROJECT_DIR,"src");
 const _SAMPLES_DIR = path.resolve( _PROJECT_DIR,"samples");
 
-const LogFilePatterns = require(path.resolve(_SRC_DIR, "logFilePatterns" ));
-const LogFileCompactor = require(path.resolve(_SRC_DIR,"logFileCompactor"));
+const LogFilePatterns = require(path.resolve(_SRC_DIR,"utils","logFilePatterns" ));
+const LogFileCompactor = require(path.resolve(_SRC_DIR,"utils","logFileCompactor"));
 
 var asserts = require('assert');
 

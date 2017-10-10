@@ -1,11 +1,12 @@
 /* jshint esversion:6 */
 
 const fs = require("fs");
-const path = require("path");
-
-const asserts = require("assert");
+const path = require( "path" );
 
 const ReadLine = require("readline");
+
+const asserts = require("assert");
+const XMLjs = require("xml-js");
 
 const _PROJECT_PATH = path.resolve(__dirname,"..");
 const _SRC_PATH = path.resolve(_PROJECT_PATH,"src");
@@ -17,7 +18,7 @@ const extractXML = require(path.resolve(_SRC_PATH,"utils","xmlExtractor"));
 
 const sampleFile = path.resolve(_SAMPLES_PATH,"logfileCompactorSample.txt");
 
-describe( "Test XML Extractor", function(){
+describe( "Test Extract XML and Parse as Json", function(){
     it("- Check Test Sample File", function(done){
         fs.access(sampleFile,done);
     });
@@ -29,6 +30,7 @@ describe( "Test XML Extractor", function(){
     var parsedLines = [];
     var parsedEvents = [];
     var xmls = [];
+    var xmljsons = [];
 
     it("- Parsed Lines from Sample File", function(done){
         var lineReader = ReadLine.createInterface({input : fs.createReadStream(sampleFile)});
@@ -72,5 +74,10 @@ describe( "Test XML Extractor", function(){
         }, expectedXMLs);
 
         asserts(xmls.length === expectedXMLs );
+    });
+
+    it("- Parse Extracted XML as JSON", function(){
+        xmljsons = xmls.map(function(xml){return XMLjs.xml2json(xml,{compact:true, spaces:4});});
+        asserts(xmls.length === xmljsons.length);
     });
 });
