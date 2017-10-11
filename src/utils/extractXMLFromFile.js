@@ -25,10 +25,12 @@ function showUsage(){
 }
 
 function readFile(targetfile){
-    var lineReader = ReadLine.createInterface({input: fs.createReadStream(targetfile)});
-    var logfileCompactor = new LogFileCompactor();
-    lineReader.on("line",logfileCompactor.parse);
-    lineReader.on("close",function(){parseLogFile(logfileCompactor.parsed());});
+    return new Promise(function(resolve,reject){
+        var lineReader = ReadLine.createInterface({input: fs.createReadStream(targetfile)});
+        var logfileCompactor = new LogFileCompactor();
+        lineReader.on("line",logfileCompactor.parse);
+        lineReader.on("close",function(){ resolve(parseLogFile(logfileCompactor.parsed()));});
+    });
 }
 
 function parseLogFile(content){
@@ -36,12 +38,32 @@ function parseLogFile(content){
         var log4JEventParser = new Log4JEventParser();
         var xmljsons = content
         .map(function(line){
-            var xml = extractXML( log4JEventParser.parse(line).data );
-            if( xml ){
-                return XMLJS.xml2json(xml,{compact:true});
+            try{
+                var event = log4JEventParser.parse(line);
+                if( event && event.data ){
+                    var xml = extractXML( event.data );
+                    if( xml ){
+                        return JSON.parse(XMLJS.xml2json(xml,{compact:true}));
+                    }
+                }
+            } catch( error ){
+                console.log( "Line : " , line );
+                console.log( "Error : ", error );
             }
         })
-        .filter(function(item){return item;});
-        console.log(xmljsons);
+        .filter(function(item){return item;})
+        .reduce(function(map, json){
+            map = map || {};
+            var elementType = Object.keys(json)[0];
+            var elementArray = map[elementType];
+            if( !elementArray ){
+                elementArray = [];
+            }
+            elementArray.push(json);
+            map[elementType] = elementArray;
+            return map;
+        },{});
+
+        console.log( xmljsons.SpecialRequests[0].SpecialRequests.SpecialRequest );
     }
 }

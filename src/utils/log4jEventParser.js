@@ -4,7 +4,7 @@ const LogfilePatterns = require("./logfilePatterns");
 
 function Log4JEventParser(){
     var events = [];
-
+    var lineCount = 0;
     this.parse = function parse(line){
         var logLevel = LogfilePatterns.LOGLEVEL.exec(line);
         var timestamp = LogfilePatterns.LOGTIMESTAMP.exec(line);
@@ -20,6 +20,7 @@ function Log4JEventParser(){
         var event = {
             logLevel : (logLevel)?logLevel[0].trim():null,
             timestamp : (timestamp)?timestamp[0].trim():null,
+            line: ++lineCount,
             data : data,
             raw : line
         };

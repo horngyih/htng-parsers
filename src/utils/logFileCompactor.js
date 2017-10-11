@@ -26,7 +26,7 @@ function LogFileCompactor( options ){
             parseStack.push(line);
             if( options.terminator.test(line)){
                 //If line has a terminator - parse as line
-                parsedLines.push( parseStack.join(" ") );                
+                parsedLines.push( parseStack.join(" ") );
                 parseStack = []; //Clear stack
             }
         }
