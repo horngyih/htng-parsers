@@ -64,6 +64,6 @@ function parseLogFile(content){
             return map;
         },{});
 
-        console.log( xmljsons.SpecialRequests[0].SpecialRequests.SpecialRequest );
+        console.log( xmljsons );
     }
 }

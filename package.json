@@ -6,9 +6,13 @@
   "scripts": {
     "test": "mocha"
   },
+  "bin" :{
+    "extractXML" : "src/bin/extractXML.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "commander": "^2.11.0",
     "xml-js": "^1.5.1"
   },
   "devDependencies": {
