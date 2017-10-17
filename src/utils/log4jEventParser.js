@@ -14,7 +14,7 @@ function Log4JEventParser(){
         var timestampEnd = (timestamp)?timestamp.index+timestamp[0].length:0;        
 
         var dataStart = timestampEnd || logLevelEnd || 0;
-        var dataEnd = classTrace.index || line.length;
+        var dataEnd = (classTrace)?classTrace.index:0 || line.length;
 
         var data = line.substring(dataStart, dataEnd).trim();
         var event = {

@@ -1,0 +1,167 @@
+{
+    "OTA_HotelRatePlanNotifRQ": {
+        "_attributes": {
+            "MessageContentCode": "8",
+            "EchoToken": "RATETIGER-DTBSR-RATES-1507786200905",
+            "TimeStamp": "2017-10-12T13:30:00.932+08:00",
+            "Version": "1",
+            "CorrelationID": "RATETIGER-DTBSR-RATES-1507786200905",
+            "xmlns:ns2": "http://htng.org/2010B",
+            "xmlns": "http://www.opentravel.org/OTA/2003/05"
+        },
+        "RatePlans": {
+            "_attributes": {
+                "HotelCode": "DTBSR"
+            },
+            "RatePlan": {
+                "_attributes": {
+                    "RatePlanType": "10",
+                    "RatePlanCode": "OTA",
+                    "RatePlanCategory": "RATES"
+                },
+                "Rates": {
+                    "Rate": [{
+                        "_attributes": {
+                            "InvTypeCode": "SQS",
+                            "CurrencyCode": "MYR",
+                            "DecimalPlaces": "2",
+                            "Start": "2017-10-12",
+                            "End": "2017-12-31"
+                        },
+                        "BaseByGuestAmts": {
+                            "BaseByGuestAmt": [{
+                                "_attributes": {
+                                    "NumberOfGuests": "1",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "405.000000"
+                                }
+                            }, {
+                                "_attributes": {
+                                    "NumberOfGuests": "2",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "405.000000"
+                                }
+                            }, {
+                                "_attributes": {
+                                    "NumberOfGuests": "3",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "405.000000"
+                                }
+                            }]
+                        }
+                    }, {
+                        "_attributes": {
+                            "InvTypeCode": "RKKS",
+                            "CurrencyCode": "MYR",
+                            "DecimalPlaces": "2",
+                            "Start": "2017-10-12",
+                            "End": "2017-12-31"
+                        },
+                        "BaseByGuestAmts": {
+                            "BaseByGuestAmt": [{
+                                "_attributes": {
+                                    "NumberOfGuests": "1",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "1900.000000"
+                                }
+                            }, {
+                                "_attributes": {
+                                    "NumberOfGuests": "2",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "1900.000000"
+                                }
+                            }, {
+                                "_attributes": {
+                                    "NumberOfGuests": "3",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "1900.000000"
+                                }
+                            }]
+                        }
+                    }, {
+                        "_attributes": {
+                            "InvTypeCode": "SSS",
+                            "CurrencyCode": "MYR",
+                            "DecimalPlaces": "2",
+                            "Start": "2017-10-12",
+                            "End": "2017-12-31"
+                        },
+                        "BaseByGuestAmts": {
+                            "BaseByGuestAmt": [{
+                                "_attributes": {
+                                    "NumberOfGuests": "1",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "275.000000"
+                                }
+                            }, {
+                                "_attributes": {
+                                    "NumberOfGuests": "2",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "275.000000"
+                                }
+                            }]
+                        }
+                    }, {
+                        "_attributes": {
+                            "InvTypeCode": "DKS",
+                            "CurrencyCode": "MYR",
+                            "DecimalPlaces": "2",
+                            "Start": "2017-10-12",
+                            "End": "2017-12-31"
+                        },
+                        "BaseByGuestAmts": {
+                            "BaseByGuestAmt": [{
+                                "_attributes": {
+                                    "NumberOfGuests": "1",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "535.000000"
+                                }
+                            }, {
+                                "_attributes": {
+                                    "NumberOfGuests": "2",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "535.000000"
+                                }
+                            }, {
+                                "_attributes": {
+                                    "NumberOfGuests": "3",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "535.000000"
+                                }
+                            }]
+                        }
+                    }, {
+                        "_attributes": {
+                            "InvTypeCode": "JKQ",
+                            "CurrencyCode": "MYR",
+                            "DecimalPlaces": "2",
+                            "Start": "2017-10-12",
+                            "End": "2017-12-31"
+                        },
+                        "BaseByGuestAmts": {
+                            "BaseByGuestAmt": [{
+                                "_attributes": {
+                                    "NumberOfGuests": "1",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "1100.000000"
+                                }
+                            }, {
+                                "_attributes": {
+                                    "NumberOfGuests": "2",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "1100.000000"
+                                }
+                            }, {
+                                "_attributes": {
+                                    "NumberOfGuests": "3",
+                                    "AgeQualifyingCode": "10",
+                                    "AmountBeforeTax": "1100.000000"
+                                }
+                            }]
+                        }
+                    }]
+                }
+            }
+        }
+    }
+}

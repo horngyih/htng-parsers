@@ -1,0 +1,12 @@
+{
+    "OTA_HotelAvailNotifRS": [{
+        "_attributes": {
+            "TimeStamp": "2017-10-11T18:40:07.261-04:00",
+            "Target": "Production",
+            "Version": "1.000",
+            "CorrelationID": "1520896136",
+            "xmlns": "http://www.opentravel.org/OTA/2003/05"
+        },
+        "Success": [{}]
+    }]
+}

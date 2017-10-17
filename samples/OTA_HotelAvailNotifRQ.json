@@ -1,0 +1,113 @@
+{
+    "OTA_HotelAvailNotifRQ": {
+        "_attributes": {
+            "MessageContentCode": "3",
+            "EchoToken": "BHS-PROD-1507803305131",
+            "TimeStamp": "2017-10-12T18:15:07.763+08:00",
+            "Version": "1",
+            "CorrelationID": "BHS-PROD-1507803305131",
+            "xmlns": "http://www.opentravel.org/OTA/2003/05"
+        },
+        "AvailStatusMessages": {
+            "_attributes": {
+                "HotelCode": "BHS"
+            },
+            "AvailStatusMessage": [{
+                "_attributes": {
+                    "BookingLimitMessageType": "SetLimit",
+                    "BookingLimit": "4"
+                },
+                "StatusApplicationControl": {
+                    "_attributes": {
+                        "Start": "2017-10-22",
+                        "End": "2017-10-22",
+                        "RatePlanCode": "BAR3",
+                        "InvTypeCode": "JS"
+                    }
+                },
+                "RestrictionStatus": {
+                    "_attributes": {
+                        "Restriction": "Master",
+                        "Status": "Open"
+                    }
+                }
+            }, {
+                "StatusApplicationControl": {
+                    "_attributes": {
+                        "Start": "2017-10-22",
+                        "End": "2017-10-22",
+                        "RatePlanCode": "BAR3",
+                        "InvTypeCode": "JS"
+                    }
+                },
+                "RestrictionStatus": {
+                    "_attributes": {
+                        "Restriction": "Arrival",
+                        "Status": "Open"
+                    }
+                }
+            }, {
+                "StatusApplicationControl": {
+                    "_attributes": {
+                        "Start": "2017-10-22",
+                        "End": "2017-10-22",
+                        "RatePlanCode": "BAR3",
+                        "InvTypeCode": "JS"
+                    }
+                },
+                "RestrictionStatus": {
+                    "_attributes": {
+                        "Restriction": "Departure",
+                        "Status": "Open"
+                    }
+                }
+            }, {
+                "StatusApplicationControl": {
+                    "_attributes": {
+                        "Start": "2017-10-22",
+                        "End": "2017-10-22",
+                        "RatePlanCode": "BAR3",
+                        "InvTypeCode": "JS"
+                    }
+                },
+                "RestrictionStatus": {
+                    "_attributes": {
+                        "Restriction": "TravelAgent",
+                        "Status": "Open"
+                    }
+                }
+            }, {
+                "_attributes": {
+                    "BookingLimitMessageType": "SetLimit",
+                    "BookingLimit": "4"
+                },
+                "StatusApplicationControl": {
+                    "_attributes": {
+                        "Start": "2017-10-22",
+                        "End": "2017-10-22",
+                        "RatePlanCode": "BAR3",
+                        "InvTypeCode": "JS"
+                    }
+                }
+            }, {
+                "StatusApplicationControl": {
+                    "_attributes": {
+                        "Start": "2017-10-22",
+                        "End": "2017-10-22",
+                        "RatePlanCode": "BAR3",
+                        "InvTypeCode": "JS"
+                    }
+                },
+                "LengthsOfStay": {
+                    "LengthOfStay": {
+                        "_attributes": {
+                            "Time": "1",
+                            "TimeUnit": "Day",
+                            "MinMaxMessageType": "SetMinLOS"
+                        }
+                    }
+                }
+            }]
+        }
+    }
+}

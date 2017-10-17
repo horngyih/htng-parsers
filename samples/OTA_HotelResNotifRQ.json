@@ -1,0 +1,319 @@
+{
+    "OTA_HotelResNotifRQ": [{
+        "_attributes": {
+            "ResStatus": "Commit",
+            "EchoToken": "39432793",
+            "TimeStamp": "2017-10-12T05:30:02Z",
+            "Version": "1.003",
+            "xmlns:ns2": "http://htng.org/2010B",
+            "xmlns": "http://www.opentravel.org/OTA/2003/05"
+        },
+        "POS": [{
+            "Source": [{
+                "RequestorID": [{
+                    "_attributes": {
+                        "Type": "22",
+                        "ID": "RateTiger"
+                    }
+                }],
+                "BookingChannel": [{
+                    "_attributes": {
+                        "Type": "2",
+                        "Primary": "true"
+                    },
+                    "CompanyName": [{
+                        "_attributes": {
+                            "Code": "110900"
+                        },
+                        "_text": ["Asiatravel.com"]
+                    }]
+                }]
+            }]
+        }],
+        "HotelReservations": [{
+            "HotelReservation": [{
+                "_attributes": {
+                    "CreateDateTime": "2017-10-12",
+                    "CreatorID": ""
+                },
+                "UniqueID": [{
+                    "_attributes": {
+                        "Type": "14",
+                        "ID": "SG-2810425-9440"
+                    }
+                }],
+                "RoomStays": [{
+                    "RoomStay": [{
+                        "RatePlans": [{
+                            "RatePlan": [{
+                                "_attributes": {
+                                    "RatePlanCode": ""
+                                },
+                                "MealsIncluded": [{
+                                    "_attributes": {
+                                        "MealPlanIndicator": "false",
+                                        "MealPlanCodes": "0"
+                                    }
+                                }]
+                            }]
+                        }],
+                        "RoomRates": [{
+                            "RoomRate": [{
+                                "_attributes": {
+                                    "RoomTypeCode": "172219",
+                                    "NumberOfUnits": "1",
+                                    "RatePlanCode": ""
+                                },
+                                "Rates": [{
+                                    "Rate": [{
+                                        "_attributes": {
+                                            "RateTimeUnit": "Day",
+                                            "UnitMultiplier": "1",
+                                            "EffectiveDate": "2017-10-18",
+                                            "ExpireDate": "2017-10-19"
+                                        },
+                                        "Base": [{
+                                            "_attributes": {
+                                                "AmountBeforeTax": "110.46",
+                                                "CurrencyCode": "SGD"
+                                            }
+                                        }]
+                                    }, {
+                                        "_attributes": {
+                                            "RateTimeUnit": "Day",
+                                            "UnitMultiplier": "1",
+                                            "EffectiveDate": "2017-10-19",
+                                            "ExpireDate": "2017-10-20"
+                                        },
+                                        "Base": [{
+                                            "_attributes": {
+                                                "AmountBeforeTax": "110.46",
+                                                "CurrencyCode": "SGD"
+                                            }
+                                        }]
+                                    }, {
+                                        "_attributes": {
+                                            "RateTimeUnit": "Day",
+                                            "UnitMultiplier": "1",
+                                            "EffectiveDate": "2017-10-20",
+                                            "ExpireDate": "2017-10-21"
+                                        },
+                                        "Base": [{
+                                            "_attributes": {
+                                                "AmountBeforeTax": "110.46",
+                                                "CurrencyCode": "SGD"
+                                            }
+                                        }]
+                                    }, {
+                                        "_attributes": {
+                                            "RateTimeUnit": "Day",
+                                            "UnitMultiplier": "1",
+                                            "EffectiveDate": "2017-10-21",
+                                            "ExpireDate": "2017-10-22"
+                                        },
+                                        "Base": [{
+                                            "_attributes": {
+                                                "AmountBeforeTax": "110.46",
+                                                "CurrencyCode": "SGD"
+                                            }
+                                        }]
+                                    }]
+                                }]
+                            }]
+                        }],
+                        "GuestCounts": [{
+                            "_attributes": {
+                                "IsPerRoom": "true"
+                            },
+                            "GuestCount": [{
+                                "_attributes": {
+                                    "AgeQualifyingCode": "10",
+                                    "Count": "2"
+                                }
+                            }, {
+                                "_attributes": {
+                                    "AgeQualifyingCode": "8",
+                                    "Count": "0"
+                                }
+                            }]
+                        }],
+                        "TimeSpan": [{
+                            "_attributes": {
+                                "Start": "2017-10-18",
+                                "End": "2017-10-22"
+                            }
+                        }],
+                        "Guarantee": [{
+                            "_attributes": {
+                                "GuaranteeCode": "None",
+                                "GuaranteeType": "None"
+                            },
+                            "GuaranteesAccepted": [{
+                                "GuaranteeAccepted": [{
+                                    "PaymentCard": [{
+                                        "_attributes": {
+                                            "CardType": "0",
+                                            "CardCode": "",
+                                            "CardNumber": "",
+                                            "SeriesCode": "",
+                                            "ExpireDate": ""
+                                        },
+                                        "CardHolderName": [{}]
+                                    }]
+                                }]
+                            }],
+                            "GuaranteeDescription": [{
+                                "Text": [{}]
+                            }]
+                        }],
+                        "Total": [{
+                            "_attributes": {
+                                "AmountBeforeTax": "441.84",
+                                "CurrencyCode": "SGD"
+                            },
+                            "Taxes": [{
+                                "_attributes": {
+                                    "Amount": "78.16000000000003"
+                                },
+                                "Tax": [{
+                                    "_attributes": {
+                                        "Code": "",
+                                        "Percent": "0.0"
+                                    }
+                                }]
+                            }]
+                        }],
+                        "BasicPropertyInfo": [{
+                            "_attributes": {
+                                "ChainCode": "",
+                                "BrandCode": "",
+                                "HotelCode": "BHS"
+                            }
+                        }],
+                        "ResGuestRPHs": [{
+                            "ResGuestRPH": [{
+                                "_attributes": {
+                                    "RPH": "1"
+                                }
+                            }]
+                        }],
+                        "Memberships": [{
+                            "Membership": [{
+                                "_attributes": {
+                                    "ProgramCode": "",
+                                    "AccountID": ""
+                                }
+                            }]
+                        }],
+                        "Comments": [{
+                            "Comment": [{
+                                "_attributes": {
+                                    "GuestViewable": "true"
+                                },
+                                "Text": [{}]
+                            }]
+                        }],
+                        "SpecialRequests": [{
+                            "SpecialRequest": [{
+                                "_attributes": {
+                                    "RequestCode": "",
+                                    "CodeContext": ""
+                                },
+                                "Text": [{
+                                    "_text": ["I will be travelling with a 9 months old baby, would need more space for stroller and baggage on bus."]
+                                }]
+                            }]
+                        }]
+                    }]
+                }],
+                "ResGuests": [{
+                    "ResGuest": [{
+                        "_attributes": {
+                            "ResGuestRPH": "1"
+                        },
+                        "Profiles": [{
+                            "ProfileInfo": [{
+                                "Profile": [{
+                                    "_attributes": {
+                                        "ProfileType": "1"
+                                    },
+                                    "Customer": [{
+                                        "PersonName": [{
+                                            "NamePrefix": [{
+                                                "_text": ["Ms."]
+                                            }],
+                                            "GivenName": [{
+                                                "_text": ["Heidi "]
+                                            }],
+                                            "MiddleName": [{}],
+                                            "Surname": [{
+                                                "_text": ["Simanhadi"]
+                                            }]
+                                        }],
+                                        "Telephone": [{
+                                            "_attributes": {
+                                                "PhoneLocationType": "7",
+                                                "PhoneTechType": "1",
+                                                "PhoneNumber": "+65 6235 1416",
+                                                "FormattedInd": "true"
+                                            }
+                                        }],
+                                        "Email": [{
+                                            "_attributes": {
+                                                "EmailType": "2"
+                                            }
+                                        }],
+                                        "Address": [{
+                                            "_attributes": {
+                                                "Type": "1"
+                                            },
+                                            "AddressLine": [{}],
+                                            "CityName": [{}],
+                                            "PostalCode": [{}],
+                                            "StateProv": [{
+                                                "_attributes": {
+                                                    "StateCode": ""
+                                                }
+                                            }],
+                                            "CountryName": [{
+                                                "_attributes": {
+                                                    "Code": "ID"
+                                                }
+                                            }]
+                                        }]
+                                    }]
+                                }]
+                            }]
+                        }],
+                        "ArrivalTransport": [{
+                            "TransportInfo": [{
+                                "_attributes": {
+                                    "Type": "",
+                                    "ID": ""
+                                }
+                            }]
+                        }],
+                        "DepartureTransport": [{
+                            "TransportInfo": [{
+                                "_attributes": {
+                                    "Type": "",
+                                    "ID": ""
+                                }
+                            }]
+                        }]
+                    }]
+                }],
+                "ResGlobalInfo": [{
+                    "HotelReservationIDs": [{
+                        "HotelReservationID": [{
+                            "_attributes": {
+                                "ResID_Type": "14",
+                                "ResID_Value": "39432793"
+                            }
+                        }]
+                    }]
+                }]
+            }]
+        }]
+    }]
+}

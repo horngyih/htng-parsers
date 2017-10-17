@@ -3,7 +3,8 @@
 var logPatterns = require("./logfilePatterns");
 
 var defaultOptions = {
-    terminator : logPatterns.CLASSTRACE
+    terminator : logPatterns.CLASSTRACE,
+    linestart : logPatterns.LOGLEVEL
 }
 
 /**
@@ -22,17 +23,26 @@ function LogFileCompactor( options ){
 
     this.parse = function parse(line){
         if( line ){
-            //Put line input in stack
-            parseStack.push(line);
-            if( options.terminator.test(line)){
-                //If line has a terminator - parse as line
-                parsedLines.push( parseStack.join(" ") );
-                parseStack = []; //Clear stack
+            // parseStack.push(line);
+            // if( options.terminator.test(line)){
+            //     parsedLines.push( parseStack.join(" ") );
+            //     parseStack = [];
+            // }
+            if( options.linestart.test(line)){
+                if( parseStack && parseStack.length > 0 ){
+                    parsedLines.push(parseStack.join(""));
+                    parseStack = [];
+                }
             }
+            parseStack.push(line);
         }
     };
 
     this.parsed = function parsed(){
+        if( parseStack ){
+            parsedLines.push(parseStack.join(""));
+            parseStack = [];
+        }        
         return parsedLines.filter((line)=>line);
     };
 }
