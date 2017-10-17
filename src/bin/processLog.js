@@ -10,6 +10,10 @@ const LogFileCompactor = require(path.resolve(__dirname,"..","utils","logFileCom
 const Log4JEventParser = require(path.resolve(__dirname,"..","utils","log4jEventParser"));
 const extractXML = require( path.resolve(__dirname,"..","utils","xmlExtractor"));
 
+const processingUtil = require( path.resolve(__dirname,"..","utils","processingUtils"));
+
+const availNotif = require( path.resolve(__dirname,"..","messages","otaHotelAvailNotifRQ"));
+
 const package = require( path.resolve("package.json"));
 program
 .version(package.version)
@@ -19,6 +23,11 @@ program
 .option( "-f, --from <value>", "Message sent after this timestamp", moment )
 .option( "-t, --to <value>", "Message sent before this timestamp", moment )
 .action(function(filename, messageType ){
+    processLogs(filename, messageType );
+})
+.parse(process.argv);
+
+function processLogs(filename, messageType ){
     console.log( "Reading from file ", filename );
     console.log( "Message Type ", messageType );
     console.log( "Property Code", program.propertyCode );
@@ -29,9 +38,9 @@ program
     .then(parseEvents)
     .then(processEvents)
     .then(collateMessages)
+    .then(processTargetMessageType.bind({messageType:messageType}))
     .then(processor);
-})
-.parse(process.argv);
+}
 
 function extract(filename){
     return new Promise(function(resolve, reject){
@@ -91,19 +100,41 @@ function collateMessages(xmljsons){
     });
 }
 
+function processTargetMessageType(result){
+    return new Promise(function(resolve,reject){
+        var targetMessages = result["OTA_HotelAvailNotifRQ"];
+        var parsed = targetMessages.map(availNotif.flattenOTAHotelAvailNotifRQ).reduce(processingUtil.flatten,[]);
+        resolve(parsed);
+    });
+}
+
 function printOut(result){
     if( Array.isArray(result) ){
-        console.log("[");
-        var count = 0;
-        result.forEach(function(item){
-            var delimeter = "";
-            count++;
-            if( count < result.length ){
-                delimiter = ",";
+        if( result.length > 0 ){
+            var sample = result[0];
+            var keys = Object.keys(sample);
+            var line = "";
+            for( var i in keys ){
+                var key = keys[i];
+                line+= key;
+                if( i < keys.length ){
+                    line += "|";
+                }                
             }
-           console.log(JSON.stringify(item)+delimiter);
+            console.log(line);
+        }
+        result.forEach(function(item){
+            var keys = Object.keys(item);
+            var line = "";
+            for( var i in keys ){
+                var key = keys[i];
+                line += item[key];
+                if( i < keys.length ){
+                    line += "|";
+                }
+            }
+            console.log(line);
         });
-        console.log("]");
     } else {
         for( var key in result ){
             console.log(key);
