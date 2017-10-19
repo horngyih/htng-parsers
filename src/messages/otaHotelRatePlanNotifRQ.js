@@ -131,6 +131,12 @@ function parseRate(rate, ratePlanCode){
         if( rate.BaseByGuestAmts ){
             var baseGuestAmtList = [];
             baseGuestAmtList = baseGuestAmtList.concat(rate.BaseByGuestAmts.BaseByGuestAmt);
+            var defaultOccupancies = {
+                single : null,
+                double : null,
+                triple : null,
+                quad : null
+            };
             var occupancies = baseGuestAmtList.map(parseOccupancyRate).reduce(function(result,occupancy){
                 result = result || {};
                 if(occupancy){
@@ -138,7 +144,7 @@ function parseRate(rate, ratePlanCode){
                 }
                 return result;
             },{});
-            result = Object.assign(result,occupancies);
+            result = Object.assign(result,defaultOccupancies,occupancies);
         }
     }
     return result;
