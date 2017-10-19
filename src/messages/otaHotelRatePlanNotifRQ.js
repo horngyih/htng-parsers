@@ -12,6 +12,25 @@ function OTAHotelRatePlanNotifRQ(){
     this.ratePlans = [];
 }
 
+OTAHotelRatePlanNotifRQ.prototype = {
+    props : {
+        messageContentCode : "integer",
+        echoToken : "string",
+        timestamp : "moment:YYYY-MM-DD hh:mm:ss",
+        correlationID : "string",
+        propertyCode : "string",
+        rate : "string",
+        roomType : "string",
+        currencyCode : "string",
+        startDate : "moment:YYYY-MM-DD",
+        endDate : "moment:YYYY-MM-DD",
+        single : "number",
+        double : "number",
+        triple : "number",
+        quad : "number"                
+    }
+}
+
 function parseOTAHotelRatePlanNotifRQ(json){
     if( json ){
         var result = new OTAHotelRatePlanNotifRQ();    

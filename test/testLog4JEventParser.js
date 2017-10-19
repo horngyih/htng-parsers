@@ -49,6 +49,8 @@ describe( "Test Log4j Event Parser", function(){
             count = count || 0;
             if( /^(INFO|DEBUG|ERROR|WARN)/.test(line)){
                 count++;
+            } else if( /^[A-Za-z]{3}\s\d{2},\s\d{4}\s\d{2}:\d{2}:\d{2}\s(AM|PM)\s/.test(line)){
+                count++;
             }
             return count;
         },0);
