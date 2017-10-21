@@ -1,3 +1,4 @@
 node_modules/**
 catalina-combined-sample.out
 catalina.out
+samples/catalina.out.sample

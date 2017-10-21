@@ -13,6 +13,27 @@ function OTAHotelAvailNotifRQ(){
     this.availabilityStatusMessages = [];
 }
 
+OTAHotelAvailNotifRQ.prototype = {
+    props : {
+        messageContentCode : "integer",
+        echoToken : "string",
+        timestamp : "moment:YYYY-MM-DD hh:mm:ss",
+        correlationID : "string",
+        propertyCode : "string",
+        startDate : "moment:YYYY-MM-DD",
+        endDate : "moment:YYYY-MM-DD",
+        ratePlan : "string",
+        roomType : "string",
+        bookingLimit : "string",
+        bookingLimitMessageType : "string",
+        xFreesell : "boolean",
+        xArrival : "boolean",
+        xDeparture : "boolean",
+        xTA : "boolean",
+        xOrg : "boolean"
+    }
+};
+
 function parseOTAHotelAvailNotifRQ(json){
     var result = new OTAHotelAvailNotifRQ();
     result = Object.assign(result, parse(json));
@@ -78,7 +99,7 @@ function parseStatusMessage(availStatusMessage){
         var result = {};
         var attributes = availStatusMessage._attributes;
         if( attributes ){
-            result.bookingLimit = attributes.BookingLimit;
+            result.bookingLimit = attributes.BookingLimit||null;
             result.bookingLimitMessageType = attributes.BookingLimitMessageType;
         }
 
@@ -92,14 +113,14 @@ function parseStatusMessage(availStatusMessage){
         }
 
         var restrictionControl = availStatusMessage.RestrictionStatus;
+        var controlFlags = {
+            xFreesell : null,
+            xArrival : null,
+            xDeparture : null,
+            xTA : null,
+            xOrg : null                
+        };
         if( restrictionControl && restrictionControl._attributes ){
-            var controlFlags = {
-                xFreesell : null,
-                xArrival : null,
-                xDeparture : null,
-                xTA : null,
-                xOrg : null                
-            };
             var controlAttributes = restrictionControl._attributes;
             var control = mapRestriction(controlAttributes.Restriction);
             var state = mapStatus(controlAttributes.Status);
@@ -108,8 +129,8 @@ function parseStatusMessage(availStatusMessage){
                 controlStatus[control] = state;
                 controlFlags = Object.assign(controlFlags, controlStatus );
             }
-            result = Object.assign(result, controlFlags );
         }
+        result = Object.assign(result, controlFlags );
         return result;
     }
 }

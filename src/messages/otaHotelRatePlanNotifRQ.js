@@ -12,6 +12,25 @@ function OTAHotelRatePlanNotifRQ(){
     this.ratePlans = [];
 }
 
+OTAHotelRatePlanNotifRQ.prototype = {
+    props : {
+        messageContentCode : "integer",
+        echoToken : "string",
+        timestamp : "moment:YYYY-MM-DD hh:mm:ss",
+        correlationID : "string",
+        propertyCode : "string",
+        rate : "string",
+        roomType : "string",
+        currencyCode : "string",
+        startDate : "moment:YYYY-MM-DD",
+        endDate : "moment:YYYY-MM-DD",
+        single : "number",
+        double : "number",
+        triple : "number",
+        quad : "number"                
+    }
+}
+
 function parseOTAHotelRatePlanNotifRQ(json){
     if( json ){
         var result = new OTAHotelRatePlanNotifRQ();    
@@ -131,6 +150,12 @@ function parseRate(rate, ratePlanCode){
         if( rate.BaseByGuestAmts ){
             var baseGuestAmtList = [];
             baseGuestAmtList = baseGuestAmtList.concat(rate.BaseByGuestAmts.BaseByGuestAmt);
+            var defaultOccupancies = {
+                single : null,
+                double : null,
+                triple : null,
+                quad : null
+            };
             var occupancies = baseGuestAmtList.map(parseOccupancyRate).reduce(function(result,occupancy){
                 result = result || {};
                 if(occupancy){
@@ -138,7 +163,7 @@ function parseRate(rate, ratePlanCode){
                 }
                 return result;
             },{});
-            result = Object.assign(result,occupancies);
+            result = Object.assign(result,defaultOccupancies,occupancies);
         }
     }
     return result;
