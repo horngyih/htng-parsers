@@ -12,24 +12,23 @@ function OTAHotelRatePlanNotifRQ(){
     this.ratePlans = [];
 }
 
-OTAHotelRatePlanNotifRQ.prototype = {
-    props : {
-        messageContentCode : "integer",
-        echoToken : "string",
-        timestamp : "moment:YYYY-MM-DD hh:mm:ss",
-        correlationID : "string",
-        propertyCode : "string",
-        rate : "string",
-        roomType : "string",
-        currencyCode : "string",
-        startDate : "moment:YYYY-MM-DD",
-        endDate : "moment:YYYY-MM-DD",
-        single : "number",
-        double : "number",
-        triple : "number",
-        quad : "number"                
-    }
-}
+
+var dataFormatters = {
+    messageContentCode : util.numberFormatter(),
+    echoToken : util.stringFormatter(),
+    timestamp : util.dateFormatter("YYYY-MM-DD hh:mm:ss.SSS"),
+    correlationID : util.stringFormatter(),
+    propertyCode : util.stringFormatter(),
+    rate : util.stringFormatter(),
+    roomType : util.stringFormatter(),
+    currencyCode : util.stringFormatter(),
+    startDate : util.dateFormatter("YYYY-MM-DD"),
+    endDate : util.dateFormatter("YYYY-MM-DD"),
+    single : util.numberFormatter(),
+    double : util.numberFormatter(),
+    triple : util.numberFormatter(),
+    quad : util.numberFormatter()
+};
 
 function parseOTAHotelRatePlanNotifRQ(json){
     if( json ){
@@ -214,5 +213,6 @@ function mapOccupancy(numberOfGuests){
 module.exports = {
     OTAHotelRatePlanNotifRQ : OTAHotelRatePlanNotifRQ,
     parseOTAHotelRatePlanNotifRQ : parseOTAHotelRatePlanNotifRQ,
-    flattenOTAHotelRatePlanNotifRQ : flattenOTAHotelRatePlanNotifRQ
+    flattenOTAHotelRatePlanNotifRQ : flattenOTAHotelRatePlanNotifRQ,
+    dataFormatters : dataFormatters
 };

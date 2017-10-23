@@ -6,14 +6,14 @@ const xmljs = require("xml-js");
 const moment = require("moment");
 
 const ReadLine = require("readline");
-const LogFileCompactor = require(path.resolve(__dirname,"..","utils","logFileCompactor"));
-const Log4JEventParser = require(path.resolve(__dirname,"..","utils","log4jEventParser"));
-const extractXML = require( path.resolve(__dirname,"..","utils","xmlExtractor"));
+const LogFileCompactor = require(path.join("..","utils","logFileCompactor"));
+const Log4JEventParser = require(path.join("..","utils","log4jEventParser"));
+const extractXML = require( path.join("..","utils","xmlExtractor"));
 
-const processingUtil = require( path.resolve(__dirname,"..","utils","processingUtils"));
+const processingUtil = require( path.join("..","utils","processingUtils"));
 
-const availNotif = require( path.resolve(__dirname,"..","messages","otaHotelAvailNotifRQ"));
-const ratePlanNotif = require( path.resolve(__dirname,"..","messages","otaHotelRatePlanNotifRQ"));
+const availNotif = require( path.join("..","messages","otaHotelAvailNotifRQ"));
+const ratePlanNotif = require( path.join("..","messages","otaHotelRatePlanNotifRQ"));
 
 const messageTypes = {
     OTA_HotelAvailNotifRQ : {
@@ -30,7 +30,7 @@ const messageTypes = {
     }
 }
 
-const package = require( path.resolve("package.json"));
+const package = require( path.join("..","..","package.json"));
 program
 .version(package.version)
 .usage( "[options] <filename>")
@@ -54,7 +54,6 @@ function processLogs(files, messageType ){
         targetFiles = targetFiles.concat(files);
         targetFiles.forEach(function(file){
             if( program.parallel ){
-                console.log( "PARALLEL" );
                 processLogFileParallel(file, messageType);
             } else {
                 processLogFile(file, messageType);
@@ -279,10 +278,11 @@ function printOut(result){
 function printArray(result){
     if( result.length > 0 ){
         var sample = result[0];
-        if( program.parallel === false ){
+        if( !program.parallel ){
             printHeader(sample);
         }
-        result.forEach(printData);
+        var props = getMessageFormatters(program.message);
+        result.forEach(function(data){ printData( data, props ); });
     } else {
         if( !program.parallel ){
             console.log( "No results found" );
@@ -336,22 +336,22 @@ function printHeader(sample){
         var key = keys[i];
         line+= key;
         if( i < keys.length ){
-            line += "|";
+            line += program.delimiter || "|";
         }                
     }
     console.log(line);
 }
 
-function printData(item){
+function printData(item, props ){
     if( item ){
+        var formatters = getMessageFormatters(program.message);
         var keys = Object.keys(item);
         var line = "";
         for( var i in keys ){
             var key = keys[i];
             var value = item[key];
-            if( moment.isMoment(value) ){
-                value = value.format("YYYY-MM-DD");
-            }
+            var formatter = formatters[key] || function(item){return item;};
+            value = formatter(value);
             line += value;
             if( i < keys.length ){
                 line += program.delimiter || "|";
@@ -374,6 +374,22 @@ function mapMessageType(messageType){
         }
     } else {
         return messageType;
+    }
+}
+
+function getMessageFormatters(messageType){
+    if(messageType){
+        messageType = mapMessageType(messageType);
+        switch( messageType ){
+            case "OTA_HotelRatePlanNotifRQ":
+                return ratePlanNotif.dataFormatters;
+            case "OTA_HotelAvailNotifRQ":
+                return availNotif.dateFormatters;
+            default:
+                return null;
+        }
+    } else {
+        return null;
     }
 }
 

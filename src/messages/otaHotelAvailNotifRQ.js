@@ -1,7 +1,6 @@
 /* jshint esversion:6 */
 
 const moment = require("moment");
-
 const util = require("../utils/processingUtils");
 
 function OTAHotelAvailNotifRQ(){
@@ -13,25 +12,23 @@ function OTAHotelAvailNotifRQ(){
     this.availabilityStatusMessages = [];
 }
 
-OTAHotelAvailNotifRQ.prototype = {
-    props : {
-        messageContentCode : "integer",
-        echoToken : "string",
-        timestamp : "moment:YYYY-MM-DD hh:mm:ss",
-        correlationID : "string",
-        propertyCode : "string",
-        startDate : "moment:YYYY-MM-DD",
-        endDate : "moment:YYYY-MM-DD",
-        ratePlan : "string",
-        roomType : "string",
-        bookingLimit : "string",
-        bookingLimitMessageType : "string",
-        xFreesell : "boolean",
-        xArrival : "boolean",
-        xDeparture : "boolean",
-        xTA : "boolean",
-        xOrg : "boolean"
-    }
+var dataFormatters = {
+    messageContentCode : util.numberFormatter(),
+    echoToken : util.stringFormatter(),
+    timestamp : util.dateFormatter("YYYY-MM-DD hh:mm:ss.SSS"),
+    correlationID : util.stringFormatter(),
+    propertyCode : util.stringFormatter(),
+    startDate : util.dateFormatter("YYYY-MM-DD"),
+    endDate : util.dateFormatter("YYYY-MM-DD"),
+    ratePlan : util.stringFormatter(),
+    roomType : util.stringFormatter(),
+    bookingLimit : util.stringFormatter(),
+    bookingLimitMessageType : util.stringFormatter(),
+    xFreesell : util.booleanFormatter(),
+    xArrival : util.booleanFormatter(),
+    xDeparture : util.booleanFormatter(),
+    xTA : util.booleanFormatter(),
+    xOrg : util.booleanFormatter()
 };
 
 function parseOTAHotelAvailNotifRQ(json){
@@ -174,9 +171,9 @@ function getRootElement(json){
     }
 }
 
-
 module.exports = {
     OTAHotelAvailNotifRQ : OTAHotelAvailNotifRQ,
     parseOTAHotelAvailNotifRQ : parseOTAHotelAvailNotifRQ,
-    flattenOTAHotelAvailNotifRQ : flattenOTAHotelAvailNotifRQ
+    flattenOTAHotelAvailNotifRQ : flattenOTAHotelAvailNotifRQ,
+    dataFormatters : dataFormatters
 };
