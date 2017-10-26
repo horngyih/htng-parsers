@@ -267,11 +267,7 @@ function processTargetMessageType(result){
             var parsed = targetMessages.map(parser).reduce(processingUtil.flatten,[]);
             resolve(parsed);
         } else {
-            if( program.parallel ){
-                resolve([]);
-            } else {
-                resolve(result);
-            }
+            resolve([]);
         }
     });
 }
