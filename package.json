@@ -7,7 +7,7 @@
     "test": "mocha"
   },
   "bin": {
-    "extractXML": "src/bin/extractXML.js"
+    "processLog": "src/bin/processLog"
   },
   "author": "",
   "license": "ISC",
