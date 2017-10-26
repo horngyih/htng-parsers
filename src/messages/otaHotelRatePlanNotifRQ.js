@@ -16,7 +16,7 @@ function OTAHotelRatePlanNotifRQ(){
 var dataFormatters = {
     messageContentCode : util.numberFormatter(),
     echoToken : util.stringFormatter(),
-    timestamp : util.dateFormatter("YYYY-MM-DD hh:mm:ss.SSS"),
+    timestamp : util.dateFormatter("YYYY-MM-DD HH:mm:ss.SSS"),
     correlationID : util.stringFormatter(),
     propertyCode : util.stringFormatter(),
     rate : util.stringFormatter(),

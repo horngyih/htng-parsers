@@ -42,11 +42,11 @@ program
 .option( "-p, --propertyCode <value>", "Filter by propertyCode" )
 .option( "--rateCode <value>", "Filter by Rate Plan Code" )
 .option( "--roomType <value>", "Filter by Room Type Code" )
-.option( "--startDate <value>", "Filter by Start Date (on or after start date)", moment )
-.option( "--endDate <value>", "Filter by End Date (on or before end date )", moment )
+.option( "--startDate <value>", "Filter by Start Date (on or after start date)", dateParser )
+.option( "--endDate <value>", "Filter by End Date (on or before end date )", dateParser )
 .option( "-m, --message <value>", "Filter for Message Type" )
-.option( "-f, --from <value>", "Message sent after this timestamp", moment )
-.option( "-t, --to <value>", "Message sent before this timestamp", moment )
+.option( "-f, --from <value>", "Message sent after this timestamp", dateTimeParser )
+.option( "-t, --to <value>", "Message sent before this timestamp", dateTimeParser )
 .option( "--parallel", "Process file in parallel" )
 .action(function(filename, messageType ){
     processLogs(filename, messageType );
@@ -322,12 +322,12 @@ function printExecutionHeader(file){
 
     if( moment.isMoment(program.from) ){
         executionHeader += "-From:";
-        executionHeader += program.from.format("YYYY-MM-DD hh:mm:ss");
+        executionHeader += program.from.format("YYYY-MM-DD HH:mm:ss");
     }
 
     if( moment.isMoment(program.to) ){
         executionHeader += "-To:";
-        executionHeader += program.to.format("YYYY-MM-DD hh:mm:ss");
+        executionHeader += program.to.format("YYYY-MM-DD HH:mm:ss");
     }
 
     if( program.propertyCode ){
@@ -440,4 +440,20 @@ function printLine(){
 
 function printToFile(text){
     //TODO: Implement write to output file where applicable;
+}
+
+function dateParser(value){
+    if( value ){
+        return moment(value, "YYYY-MM-DD" );
+    } else {
+        return value;
+    }
+}
+
+function dateTimeParser(value){
+    if( value ) {
+        return moment(value, "YYYY-MM-DD HH:mm:ss" );
+    } else {
+        return value;
+    }
 }
