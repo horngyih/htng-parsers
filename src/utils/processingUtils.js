@@ -39,7 +39,7 @@ function numberFormatter(){
 
 function stringFormatter(clip, ellipsis){
     return function(target){
-        if( typeof target !== "string" && target.toString ){
+        if( typeof target === "string" ){
             if( clip > 0 ){
                 return target.substring(0,clip);
             } else {
