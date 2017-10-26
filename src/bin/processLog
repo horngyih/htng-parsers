@@ -173,7 +173,6 @@ function filterEvents(events){
                 var eventTimestamp = (event.timestamp)?moment(event.timestamp,"MM-DD hh:mm:ss" ):null;
                 if( eventTimestamp ){
                     if( program.to && program.from ){
-                        console.log( "EventTimeStamp : ", eventTimestamp );
                         return eventTimestamp.isBetween( program.from, program.to, null, "[]" );
                     } else if( program.to) {
                         return eventTimestamp.isSameOrBefore(program.to);
