@@ -36,10 +36,13 @@ program
 .version(package.version)
 .usage( "[options] <filename>")
 .arguments("<filename...>")
+.option( "-o, --output <value>", "Output file" )
 .option( "-d, --delimiter <value>", "Output delimiter" )
 .option( "-p, --propertyCode <value>", "Filter by propertyCode" )
 .option( "--rateCode <value>", "Filter by Rate Plan Code" )
 .option( "--roomType <value>", "Filter by Room Type Code" )
+.option( "--startDate <value>", "Filter by Start Date (on or after start date)", moment )
+.option( "--endDate <value>", "Filter by End Date (on or before end date )", moment )
 .option( "-m, --message <value>", "Filter for Message Type" )
 .option( "-f, --from <value>", "Message sent after this timestamp", moment )
 .option( "-t, --to <value>", "Message sent before this timestamp", moment )
@@ -75,7 +78,7 @@ function processLogFile(filename, messageType){
     .then(filterMessages)
     .then(processor)
     .then(function(){
-        console.log( "DONE - ", filename );
+        printLine( "DONE - ", filename );
     })
     .catch(handleError);
 }
@@ -169,7 +172,8 @@ function filterEvents(events){
                 var eventTimestamp = (event.timestamp)?moment(event.timestamp,"MM-DD hh:mm:ss" ):null;
                 if( eventTimestamp ){
                     if( program.to && program.from ){
-                        return eventTimestamp.isBetween( program.to, program.from, null, "[]" );
+                        console.log( "EventTimeStamp : ", eventTimestamp );
+                        return eventTimestamp.isBetween( program.from, program.to, null, "[]" );
                     } else if( program.to) {
                         return eventTimestamp.isSameOrBefore(program.to);
                     } else if( program.from ){
@@ -200,6 +204,19 @@ function filterMessages(messages){
                     if( program.roomType ){
                         result &= message.roomType === program.roomType;
                     }
+
+                    if( program.startDate ){
+                        if( moment.isMoment( program.startDate ) ){
+                            result &=  program.startDate.isSameOrBefore(message.startDate);
+                        }
+                    }
+
+                    if( program.endDate ){
+                        if( moment.isMoment( message.endDate ) ){
+                            result &= message.endDate.isSameOrBefore( program.endDate );
+                        }
+                    }
+
                     return result;
                 }));
             } else {
@@ -265,11 +282,11 @@ function printOut(result){
             printArray(result);
         } else {
             for( var key in result ){
-                console.log(key);
+                printLine(key);
                 if( Array.isArray(result) ){
                     printArray(result);
                 } else {
-                    console.log(JSON.stringify(result[key]));
+                    printLine(JSON.stringify(result[key]));
                 }
             }
         }
@@ -286,7 +303,7 @@ function printArray(result){
         result.forEach(function(data){ printData( data, props ); });
     } else {
         if( !program.parallel ){
-            console.log( "No results found" );
+            printLine( "No results found" );
         }
     }
 }
@@ -327,7 +344,7 @@ function printExecutionHeader(file){
         executionHeader += "-RoomType:";
         executionHeader += program.roomType;
     }
-    console.log(executionHeader);
+    printLine(executionHeader);
 }
 
 function printHeader(sample){
@@ -340,7 +357,7 @@ function printHeader(sample){
             line += program.delimiter || "|";
         }                
     }
-    console.log(line);
+    printLine(line);
 }
 
 function printData(item, props ){
@@ -358,7 +375,7 @@ function printData(item, props ){
                 line += program.delimiter || "|";
             }
         }
-        console.log(line);
+        printLine(line);
     }
 }
 
@@ -385,7 +402,7 @@ function getMessageFormatters(messageType){
             case "OTA_HotelRatePlanNotifRQ":
                 return ratePlanNotif.dataFormatters;
             case "OTA_HotelAvailNotifRQ":
-                return availNotif.dateFormatters;
+                return availNotif.dataFormatters;
             default:
                 return null;
         }
@@ -396,4 +413,31 @@ function getMessageFormatters(messageType){
 
 function handleError(err){
     console.error(err);
+}
+
+function printLine(){
+    if( arguments.length > 0 ){
+        if( arguments.length === 1 ){
+            console.log(arguments[0]);
+        } else {
+            var texts = [].slice.call(arguments,0, arguments.length-1);
+            var lastArgument = arguments[arguments.length-1];
+            var printToFileFlag = false;
+            if( lastArgument === true || lastArgument === false ){
+                printToFileFlag = lastArgument;
+            } else {
+                texts = texts.concat(lastArgument);
+            }
+
+            console.log( texts.join("") );
+            if( printToFileFlag === true ){
+                //Add to output file buffer
+                printToFile(texts.join(""));
+            }
+        }
+    }
+}
+
+function printToFile(text){
+    //TODO: Implement write to output file where applicable;
 }
