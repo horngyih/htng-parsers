@@ -83,9 +83,7 @@ describe( "Test OTA_HotalAvailNotifRQ Util", function(){
     describe("Test OTAHotelAvailNotifRQ Props",function(){
         var otaHotelAvailNotifRQ = new availNotif.OTAHotelAvailNotifRQ();
         it("Should contain props construct", function(){
-            console.log(otaHotelAvailNotifRQ.props );
             otaHotelAvailNotifRQ = availNotif.flattenOTAHotelAvailNotifRQ(otaHotelAvailNotifRQ);
-            console.log(otaHotelAvailNotifRQ);
         });
     });
 });
