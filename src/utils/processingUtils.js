@@ -53,7 +53,11 @@ function stringFormatter(clip, ellipsis){
 
 function booleanFormatter(){
     return function(target){
-        return target || null;
+        if( target === true ){
+            return "true";
+        } else {
+            return "false";
+        }
     };
 }
 
