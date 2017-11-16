@@ -133,13 +133,15 @@ function parseStatusMessage(availStatusMessage){
 }
 
 function mapStatus(status){
-    if("Open"===status){
-        return false;
-    } else if( "Close"===status){
-        return true;
-    } else{
-        return null;
+    if( status ){
+        switch(status){
+            case "Close":
+                return true;
+            case "Open":
+                return false;
+        }
     }
+    return null;
 }
 
 function mapRestriction(restriction){
