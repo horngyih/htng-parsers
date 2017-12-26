@@ -17,6 +17,10 @@ const processingUtil = require( path.join("..","utils","processingUtils"));
 const availNotif = require( path.join("..","messages","otaHotelAvailNotifRQ"));
 const ratePlanNotif = require( path.join("..","messages","otaHotelRatePlanNotifRQ"));
 
+const _OTA_HotelAvailNotifRQ = "OTA_HotelAvailNotifRQ";
+const _OTA_HotelRatePlanNotifRQ = "OTA_HotelRatePlanNotifRQ";
+const _OTA_HotelResNotifRQ = "OTA_HotelResNotifRQ";
+
 const messageTypes = {
     OTA_HotelAvailNotifRQ : {
         flat : availNotif.flattenOTAHotelAvailNotifRQ,
@@ -54,6 +58,7 @@ program
 .parse(process.argv);
 
 function processLogs(files, messageType ){
+    program.message = mapMessageType(program.message);
     var targetFiles = [];
     if( files ){
         targetFiles = targetFiles.concat(files);
@@ -254,10 +259,7 @@ function collateMessages(xmljsons){
 
 function processTargetMessageType(result){
     return new Promise(function(resolve,reject){
-        var messageType = "OTA_HotelAvailNotifRQ";
-        if( program.message ){
-            messageType = mapMessageType(program.message);
-        }
+        var messageType = program.message;
         var targetMessages = result[messageType];
         if( targetMessages ){
             var parser = messageTypes[messageType].flat;
@@ -313,7 +315,7 @@ function printExecutionHeader(file){
 
     if( program.message ){
         executionHeader += "-";
-        executionHeader += mapMessageType(program.message);
+        executionHeader += program.message;
     }
 
     if( moment.isMoment(program.from) ){
@@ -358,13 +360,13 @@ function printHeader(sample){
 
 function printData(item, props ){
     if( item ){
-        var formatters = getMessageFormatters(program.message);
+        var formatters = getMessageFormatters(program.message) || {};
         var keys = Object.keys(item);
         var line = "";
         for( var i in keys ){
             var key = keys[i];
             var value = item[key];
-            var formatter = formatters[key] || function(item){return item;};
+            var formatter = formatters[key] || function(item){ return item;};
             value = formatter(value);
             line += value;
             if( i < keys.length ){
@@ -377,34 +379,28 @@ function printData(item, props ){
 
 function mapMessageType(messageType){
     if( typeof messageType === "string" ){
-        switch(messageType.toLowerCase()){
-            case "rate":
-                return "OTA_HotelRatePlanNotifRQ";
-            case "avail":
-            case "availability":
-                return "OTA_HotelAvailNotifRQ";
-            default:
-                return messageType;
+        messageType = messageType.toLowerCase();
+        if(messageType === "rate" ){
+            return _OTA_HotelRatePlanNotifRQ;
+        } else if( messageType === "avail" || messageType === "availability" ){
+            return _OTA_HotelAvailNotifRQ;
         }
-    } else {
-        return messageType;
     }
+    console.log( "No Message Type specified - Default to [OTA_HotelAvailNotifRQ]" );
+    return _OTA_HotelAvailNotifRQ;
 }
 
 function getMessageFormatters(messageType){
     if(messageType){
-        messageType = mapMessageType(messageType);
+        messageType = messageType;
         switch( messageType ){
             case "OTA_HotelRatePlanNotifRQ":
                 return ratePlanNotif.dataFormatters;
             case "OTA_HotelAvailNotifRQ":
                 return availNotif.dataFormatters;
-            default:
-                return null;
         }
-    } else {
-        return null;
     }
+    return null;
 }
 
 function handleError(err){

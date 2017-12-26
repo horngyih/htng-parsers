@@ -48,8 +48,15 @@ function flattenOTAHotelAvailNotifRQ(json){
     if( otaHotelAvailNotifRQ instanceof OTAHotelAvailNotifRQ ){
         return otaHotelAvailNotifRQ.availabilityStatusMessages.map(function(availStatusMessage){
             var flattened = {};
-            flattened = Object.assign(otaHotelAvailNotifRQ,availStatusMessage);
-            delete flattened.availabilityStatusMessages;
+            delete otaHotelAvailNotifRQ.availabilityStatusMessages;
+            flattened = Object.assign({},otaHotelAvailNotifRQ,availStatusMessage);
+            if(!flattened.bookingLimit){
+                flattened.bookingLimit = null;
+            }
+
+            if(!flattened.bookingLimitMessageType){
+                flattened.bookingLimitMessageType = "statusMessage";
+            }
             return flattened;
         });
     } else {
@@ -85,8 +92,7 @@ function parse(json){
 
 function parseAvailStatusMessages(availStatusMessages){
     if( availStatusMessages ){
-        var list = [];
-        list = list.concat(availStatusMessages.AvailStatusMessage);
+        var list = [].concat(availStatusMessages.AvailStatusMessage);
         return list.map(parseStatusMessage);
     }
 }
@@ -98,6 +104,9 @@ function parseStatusMessage(availStatusMessage){
         if( attributes ){
             result.bookingLimit = attributes.BookingLimit||null;
             result.bookingLimitMessageType = attributes.BookingLimitMessageType;
+        } else {
+            result.bookingLimit = null;
+            result.bookingLimitMessageType = 'StatusMessage';
         }
 
         var statusApplicationControl = availStatusMessage.StatusApplicationControl;
@@ -127,7 +136,7 @@ function parseStatusMessage(availStatusMessage){
                 controlFlags = Object.assign(controlFlags, controlStatus );
             }
         }
-        result = Object.assign(result, controlFlags );
+        result = Object.assign({},result, controlFlags );
         return result;
     }
 }
