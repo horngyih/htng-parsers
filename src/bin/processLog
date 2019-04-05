@@ -1,4 +1,4 @@
-#! /usr/bin/env nodejs
+#! /usr/bin/env node
 /* jshint esversion:6 */
 
 const fs = require("fs");
@@ -32,7 +32,7 @@ const messageTypes = {
     },
     OTA_HotelResNotifRQ : {
         flat : function(item){return item}, //Dummy flat parser
-        parse : function(item){return item} //Dummy parse
+        parse : function(item){return JSON.stringify(item)} //Dummy parse
     }
 }
 
@@ -366,7 +366,7 @@ function printData(item, props ){
         for( var i in keys ){
             var key = keys[i];
             var value = item[key];
-            var formatter = formatters[key] || function(item){ return item;};
+            var formatter = formatters[key] || function(item){ return JSON.stringify(item);};
             value = formatter(value);
             line += value;
             if( i < keys.length ){
@@ -384,6 +384,8 @@ function mapMessageType(messageType){
             return _OTA_HotelRatePlanNotifRQ;
         } else if( messageType === "avail" || messageType === "availability" ){
             return _OTA_HotelAvailNotifRQ;
+        } else if( messageType === "reservation" ){
+            return _OTA_HotelResNotifRQ;
         }
     }
     console.log( "No Message Type specified - Default to [OTA_HotelAvailNotifRQ]" );

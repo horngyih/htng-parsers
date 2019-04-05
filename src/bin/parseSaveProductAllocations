@@ -1,0 +1,28 @@
+#! /usr/bin/env node
+
+const path = require("path");
+
+const parser = require(path.join("..", "parsers", "saveProductAllocationParser" ));
+const program = require("commander");
+
+const package = require(path.join("..", "..", "package.json"));
+
+program
+    .version(package.version)
+    .usage("<filename>")
+    .arguments("<filename...>")
+    .action( (filename)=>{
+        console.log( "Parse ", filename );
+        let targetFiles = [];
+        if( filename ){
+            targetFiles = targetFiles.concat(filename);
+            targetFiles.forEach( file=>{
+                parser
+                    .parse(file)
+                    .then(lines=>{
+                        console.log(lines.join("\n"));
+                    });
+            });
+        }
+    })
+    .parse(process.argv);
