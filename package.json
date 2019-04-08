@@ -7,16 +7,19 @@
     "test": "mocha"
   },
   "bin": {
-    "processLog": "src/bin/processLog"
+    "processLog": "src/bin/processLog",
+    "parseSaveProductAllocations": "src/bin/parseSaveProductAllocations"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.11.0",
-    "moment": "^2.19.1",
-    "xml-js": "^1.5.1"
+    "commander": "^2.20.0",
+    "moment": "^2.24.0",
+    "npm": "^6.9.0",
+    "rx": "^4.1.0",
+    "xml-js": "^1.6.11"
   },
   "devDependencies": {
-    "mocha": "^4.0.1"
+    "mocha": "^4.1.0"
   }
 }
