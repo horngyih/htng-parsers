@@ -9,6 +9,7 @@
   "bin": {
     "processLog": "src/bin/processLog",
     "parseSaveProductAllocations": "src/bin/parseSaveProductAllocations"
+    "buferedReaer" : "src/bin/bufferedReader"
   },
   "author": "",
   "license": "ISC",
