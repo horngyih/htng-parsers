@@ -1,0 +1,28 @@
+#! /usr/bin/env node
+
+const path = require("path");
+const program = require("commander");
+const { lineStreamReader } = require(path.join("..","utils","lineReader"));
+const { compact } = require(path.join("..", "utils", "compactor"));
+
+const rxjs = require("rxjs");
+const ops = require("rxjs/operators");
+
+const package = require(path.join("..","..","package.json"));
+
+program
+  .version(package.version)
+  .usage("[options]" )
+  .option("-s, --start <regular expression>", "starting regular expression")
+  .option("-e, --end <regular expression>", "ending regular expression")
+  .option("-f, --file <filename>", "read from file")
+  .action( ()=>{
+    read();
+  })
+  .parse(process.argv);
+
+function read(){
+  compact( lineStreamReader(process.stdin), program.start, program.end )
+    .pipe( ops.map( item=>item.map(i=>i.trim()).join(" ")) )
+    .subscribe(console.log);
+}

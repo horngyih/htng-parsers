@@ -1,0 +1,16 @@
+#! /usr/bin/env node
+
+const path = require("path");
+const { lineStreamReader } = require(path.join("..","utils","lineReader"));
+const extractXML = require(path.join("..","utils","xmlExtractor"));
+
+const ops = require("rxjs/operators");
+
+lineStreamReader(process.stdin)
+    .pipe(
+        ops.map(line=>JSON.parse(line).data),
+        ops.map(data=>extractXML(data,{compact:true, spaces:2})),
+        ops.filter(l=>l),
+        ops.map(obj=>JSON.stringify(obj))
+    )
+    .subscribe(console.log);

@@ -1,0 +1,49 @@
+#! /usr/bin/env node
+
+const http = require("http");
+const path = require("path");
+
+const url = require("url");
+
+const ops = require("rxjs/operators");
+
+const ELASTICSEARCH = process.env.ELASTICSEARCH||"http://dockerhost:9200";
+
+const { lineStreamReader } = require(path.join("..","utils","lineReader"));
+
+function loadToElasticSearch(json){
+    let elasticSearchURL = url.parse(ELASTICSEARCH);
+    let endpoint = `messages/${json.type}/`;
+    const options = {
+        hostname : elasticSearchURL.hostname,
+        port : elasticSearchURL.port,
+        path : endpoint,
+        method : "POST",
+        headers : {
+            "Content-Type" : "application/json"
+        }
+    };
+
+    console.log("Sending...");
+
+    const request = http.request(options, res=>{
+        console.log(`Status:${res.statusCode}`);
+        let body = '';
+        res.on("data",chunk=>{
+            body+=chunk;
+        });
+        res.on("close",()=>{
+            console.log(body);
+        });
+    });
+    request.write(JSON.stringify(json, {compact:true} ));
+    request.end();
+}
+
+lineStreamReader(process.stdin)
+    .pipe( ops.map(line=>JSON.parse(line)))
+    .subscribe(json=>{
+        setTimeout( ()=>{
+            loadToElasticSearch(json)
+        }, 300 );
+});

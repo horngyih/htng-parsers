@@ -1,0 +1,13 @@
+#! /usr/bin/env node
+
+const path = require("path");
+const { lineStreamReader } = require(path.join("..","utils","lineReader"));
+const Log4JEventParser = require(path.join("..","utils","log4jEventParser"));
+
+const ops = require("rxjs/operators");
+
+const parser = new Log4JEventParser();
+
+lineStreamReader(process.stdin)
+    .pipe( ops.map( line=>JSON.stringify(parser.parse(line)) ) )
+    .subscribe(console.log);

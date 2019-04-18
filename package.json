@@ -9,7 +9,8 @@
   "bin": {
     "processLog": "src/bin/processLog",
     "parseSaveProductAllocations": "src/bin/parseSaveProductAllocations",
-    "buferedReaer": "src/bin/bufferedReader"
+    "buferedReaer": "src/bin/bufferedReader",
+    "jscompact": "src/bin/jscompact"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +18,7 @@
     "commander": "^2.20.0",
     "moment": "^2.24.0",
     "npm": "^6.9.0",
-    "rx": "^4.1.0",
+    "rxjs": "^6.4.0",
     "xml-js": "^1.6.11"
   },
   "devDependencies": {

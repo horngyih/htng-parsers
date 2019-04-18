@@ -1,0 +1,29 @@
+#! /usr/bin/env node
+
+const path = require("path");
+
+const rxjs = require("rxjs");
+const ops = require("rxjs/operators");
+
+const { lineStreamReader } = require(path.join("..","utils","lineReader"));
+
+const messageType = require(path.join("..","messages","messageTypes"));
+
+function parseMessage(json){
+    let parsers = messageType[Object.keys(json)[0]];
+    if( parsers ){
+        return parsers.flat(json);
+    } else {
+        return [];
+    }
+}
+
+lineStreamReader(process.stdin)
+    .pipe(
+        ops.map(line=>JSON.parse(line)),
+        ops.map(parseMessage),
+        ops.map(arr=>rxjs.from(arr)),
+        ops.mergeAll(),
+        ops.map(json=>JSON.stringify(json,{compact:true}))
+    )
+    .subscribe(console.log);

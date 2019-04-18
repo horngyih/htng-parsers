@@ -1,0 +1,19 @@
+INFO <OTA_HotelAvailNotifRQ><Content></Content></OTA_HotelAvailNotifRQ>
+INFO test
+INFO
+INFO
+
+
+
+INFO <OTA_HotelAvailNotifRQ>
+  <Content>
+      Test
+  </Contet>
+</OTA_HotelAvailNotifRQ>
+INFO
+<OTA_HotelAvailNotifRQ>
+  <Content>
+      1
+  <Content>
+</OTA_HotelAvailNotifRQ>
+INFO <OTA_HotelAvailNotifRQ></OTA_HotelAvailNotifRQ>

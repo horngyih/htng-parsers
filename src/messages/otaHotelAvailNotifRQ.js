@@ -4,6 +4,7 @@ const moment = require("moment");
 const util = require("../utils/processingUtils");
 
 function OTAHotelAvailNotifRQ(){
+    this.type="OTA_HotelAvailNotifRQ";
     this.messageContentCode = null;
     this.echoToken = null;
     this.timestamp = null;

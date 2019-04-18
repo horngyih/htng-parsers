@@ -1,0 +1,32 @@
+#! /usr/bin/env node
+
+const rxjs = require("rxjs");
+const ops = require("rxjs/operators");
+const { compact } = require("./src/utils/compactor");
+
+const Log4JEventParser = require("./src/utils/log4jEventParser");
+
+function read(){
+    let subject = new rxjs.Subject();
+    let buffer = '';
+
+    process.stdin.on("data", data=>{
+        buffer += data;
+        let lines = buffer.split("\n");
+        buffer = lines.pop();
+        lines.forEach( line=>{
+            subject.next(line);
+        });
+    });
+
+    process.stdin.on("close", ()=>{
+        subject.complete();
+    });
+
+    return subject;
+}
+
+parser = new Log4JEventParser();
+
+read()
+    .subscribe(line=>console.log("LINE: " + JSON.stringify(parser.parse(line)) ));
