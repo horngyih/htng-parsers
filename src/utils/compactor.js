@@ -64,7 +64,7 @@ function compact(observable, start, end ){
         subject.complete();
     }
 
-    return subject;
+    return subject.pipe(rxops.map(i=>i.join("")));
 }
 
 module.exports = {

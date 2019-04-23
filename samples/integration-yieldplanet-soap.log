@@ -1,0 +1,3563 @@
+INFO  04-22 11:59:00 Inbound Message
+----------------------------
+ID: 154238
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[859], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 03:58:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T05:59:00.4596525+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Processing</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Processing</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Processing</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 11:59:00 Outbound Message
+---------------------------
+ID: 154239
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:26af0f91-6472-430b-b388-600940144914</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498607</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 11:59:00 Inbound Message
+----------------------------
+ID: 154239
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[859], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 03:58:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T05:59:00.6516461+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Processing</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Processing</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Processing</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 11:59:00 Outbound Message
+---------------------------
+ID: 154240
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:7a8d8599-19e3-4415-a251-f06d9160c2ad</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498608</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 11:59:00 Inbound Message
+----------------------------
+ID: 154240
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[859], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 03:59:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T05:59:00.8396504+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Processing</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Processing</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Processing</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:00:00 Outbound Message
+---------------------------
+ID: 154241
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:40819398-873b-4edc-8512-f4c374a544b3</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498606</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:00:00 Inbound Message
+----------------------------
+ID: 154241
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[856], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:00:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:00:00.4559883+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:00:00 Outbound Message
+---------------------------
+ID: 154242
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:f947c83b-a10f-4d7d-874f-a1435d9fea4c</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498607</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:00:00 Inbound Message
+----------------------------
+ID: 154242
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[856], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:00:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:00:00.6525156+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:00:00 Outbound Message
+---------------------------
+ID: 154243
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:96458e80-4695-4bc0-bc0e-5aac0d372c90</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498608</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:00:00 Inbound Message
+----------------------------
+ID: 154243
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[856], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:00:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:00:00.8484851+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:17:00 Outbound Message
+---------------------------
+ID: 154244
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:d8f5a7ce-a40b-400e-92d4-c1abfd48fa9a</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75976</RoomId>
+            <RatePlanId>61795</RatePlanId>
+            <DateFrom>2019-04-23T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-23T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>16</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75976</RoomId>
+            <RatePlanId>61795</RatePlanId>
+            <DateFrom>2019-04-24T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-24T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>10</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>1</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75976</RoomId>
+            <RatePlanId>61795</RatePlanId>
+            <DateFrom>2019-04-25T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-25T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>9</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>2</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:17:01 Inbound Message
+----------------------------
+ID: 154244
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[552], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:17:01 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:17:00.9941262+02:00</TimeStamp>
+        </Status>
+        <RequestId>103498981</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:17:01 Outbound Message
+---------------------------
+ID: 154245
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:968a18f7-2370-4c01-bc27-7942557ee603</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75976</RoomId>
+            <RatePlanId>61794</RatePlanId>
+            <DateFrom>2019-04-23T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-23T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>16</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75976</RoomId>
+            <RatePlanId>61794</RatePlanId>
+            <DateFrom>2019-04-24T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-24T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>10</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>1</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75976</RoomId>
+            <RatePlanId>61794</RatePlanId>
+            <DateFrom>2019-04-25T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-25T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>9</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>2</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:17:02 Inbound Message
+----------------------------
+ID: 154245
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[552], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:17:01 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:17:01.8031555+02:00</TimeStamp>
+        </Status>
+        <RequestId>103498982</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:17:02 Outbound Message
+---------------------------
+ID: 154246
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:dbaa2fb5-c4bb-4c7e-9a01-af510d7f0da9</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75976</RoomId>
+            <RatePlanId>61793</RatePlanId>
+            <DateFrom>2019-04-23T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-23T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>16</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75976</RoomId>
+            <RatePlanId>61793</RatePlanId>
+            <DateFrom>2019-04-24T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-24T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>10</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>1</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75976</RoomId>
+            <RatePlanId>61793</RatePlanId>
+            <DateFrom>2019-04-25T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-25T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>9</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>2</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:17:02 Inbound Message
+----------------------------
+ID: 154246
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[551], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:17:02 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:17:02.151444+02:00</TimeStamp>
+        </Status>
+        <RequestId>103498983</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:19:00 Outbound Message
+---------------------------
+ID: 154247
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:b83aba44-25b0-462d-b66b-d799f2885a53</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498981</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:19:00 Inbound Message
+----------------------------
+ID: 154247
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[850], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:18:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:19:00.6455976+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:19:00 Outbound Message
+---------------------------
+ID: 154248
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:ca87aa57-0b10-4c60-afa0-090e204e214b</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498982</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:19:00 Inbound Message
+----------------------------
+ID: 154248
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[850], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:19:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:19:00.8335517+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:19:00 Outbound Message
+---------------------------
+ID: 154249
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:72ddfce6-f351-48e0-bb56-ac3d10c36838</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498983</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:19:01 Inbound Message
+----------------------------
+ID: 154249
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[850], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:19:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:19:01.0415311+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:20:00 Outbound Message
+---------------------------
+ID: 154250
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:d068c1be-3879-4401-b34b-77d2b2d8d3be</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498981</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:20:00 Inbound Message
+----------------------------
+ID: 154250
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[849], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:19:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:20:00.443013+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:20:00 Outbound Message
+---------------------------
+ID: 154251
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:cb3153dd-1990-4d01-b7e0-a3d11b4b5a34</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498982</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:20:00 Inbound Message
+----------------------------
+ID: 154251
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[850], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:19:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:20:00.6269975+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:20:00 Outbound Message
+---------------------------
+ID: 154252
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:0d3e7f25-0283-47d1-8980-c6c384fcece3</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498983</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:20:00 Inbound Message
+----------------------------
+ID: 154252
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[850], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:19:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:20:00.8070685+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:21:00 Outbound Message
+---------------------------
+ID: 154253
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:aa42f44d-cb75-4bfd-bb8f-959bb727b048</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498981</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:21:00 Inbound Message
+----------------------------
+ID: 154253
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[850], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:20:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:21:00.4422304+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:21:00 Outbound Message
+---------------------------
+ID: 154254
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:9b26e46b-eb75-4a61-95c3-11c1ee8d4417</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498982</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:21:00 Inbound Message
+----------------------------
+ID: 154254
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[850], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:20:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:21:00.6262486+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:21:00 Outbound Message
+---------------------------
+ID: 154255
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:2b3dd1bd-1562-4c14-b994-7ed00828070c</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498983</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:21:00 Inbound Message
+----------------------------
+ID: 154255
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[850], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:20:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:21:00.8102335+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:22:00 Outbound Message
+---------------------------
+ID: 154256
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:8dd33069-e951-4ddf-99d5-c1ff864df9a4</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498981</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:22:00 Inbound Message
+----------------------------
+ID: 154256
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[856], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:22:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:22:00.4466845+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:22:00 Outbound Message
+---------------------------
+ID: 154257
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:62ee89c4-a73f-4c91-8034-c43b1ca7cc0b</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498982</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:22:00 Inbound Message
+----------------------------
+ID: 154257
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[856], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:22:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:22:00.6466839+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:22:00 Outbound Message
+---------------------------
+ID: 154258
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:98cab0e5-2f94-4de0-a595-a8539fd6712a</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103498983</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:22:00 Inbound Message
+----------------------------
+ID: 154258
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[856], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:22:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:22:00.8393292+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>2</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:34:00 Outbound Message
+---------------------------
+ID: 154259
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:6ebbb708-9d2b-43eb-bc02-677aa3416d08</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75984</RoomId>
+            <RatePlanId>61795</RatePlanId>
+            <DateFrom>2019-04-22T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-22T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>8</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75984</RoomId>
+            <RatePlanId>61795</RatePlanId>
+            <DateFrom>2019-04-23T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-23T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>1</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>1</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:34:00 Inbound Message
+----------------------------
+ID: 154259
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[552], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:34:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:34:00.6626409+02:00</TimeStamp>
+        </Status>
+        <RequestId>103499171</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:34:00 Outbound Message
+---------------------------
+ID: 154260
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:299c4936-812a-4f3f-9f9d-914d2f5eb523</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75981</RoomId>
+            <RatePlanId>61794</RatePlanId>
+            <DateFrom>2019-05-15T00:00:00.000Z</DateFrom>
+            <DateTill>2019-05-15T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>6</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:34:01 Inbound Message
+----------------------------
+ID: 154260
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[552], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:34:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:34:01.0564335+02:00</TimeStamp>
+        </Status>
+        <RequestId>103499172</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:34:01 Outbound Message
+---------------------------
+ID: 154261
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:1f8d70ab-4c0d-4bc2-ad83-0dac049e998d</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75984</RoomId>
+            <RatePlanId>61793</RatePlanId>
+            <DateFrom>2019-04-22T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-22T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>8</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75984</RoomId>
+            <RatePlanId>61793</RatePlanId>
+            <DateFrom>2019-04-23T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-23T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>1</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>1</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:34:01 Inbound Message
+----------------------------
+ID: 154261
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[552], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:34:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:34:01.2804089+02:00</TimeStamp>
+        </Status>
+        <RequestId>103499173</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:34:01 Outbound Message
+---------------------------
+ID: 154262
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:88d99fb0-b7ff-4b8b-baa8-ed94b26f91f3</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75984</RoomId>
+            <RatePlanId>61794</RatePlanId>
+            <DateFrom>2019-04-22T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-22T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>8</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75984</RoomId>
+            <RatePlanId>61794</RatePlanId>
+            <DateFrom>2019-04-23T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-23T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>1</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>1</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:34:01 Inbound Message
+----------------------------
+ID: 154262
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[552], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:34:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:34:01.4964404+02:00</TimeStamp>
+        </Status>
+        <RequestId>103499174</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:34:01 Outbound Message
+---------------------------
+ID: 154263
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:94f8f829-1513-48c7-bd3d-521c6626cfbd</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75981</RoomId>
+            <RatePlanId>61795</RatePlanId>
+            <DateFrom>2019-05-15T00:00:00.000Z</DateFrom>
+            <DateTill>2019-05-15T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>6</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:34:01 Inbound Message
+----------------------------
+ID: 154263
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[552], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:34:01 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:34:01.7084711+02:00</TimeStamp>
+        </Status>
+        <RequestId>103499175</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:34:01 Outbound Message
+---------------------------
+ID: 154264
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:6d0ea7d6-deaa-43b9-ae70-9c0093f5e0c0</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75981</RoomId>
+            <RatePlanId>61793</RatePlanId>
+            <DateFrom>2019-05-15T00:00:00.000Z</DateFrom>
+            <DateTill>2019-05-15T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>6</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:34:02 Inbound Message
+----------------------------
+ID: 154264
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[552], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:34:01 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:34:01.9204314+02:00</TimeStamp>
+        </Status>
+        <RequestId>103499176</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:36:00 Outbound Message
+---------------------------
+ID: 154265
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:0feda01a-9ac2-458b-bd5b-4c736ba82d26</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499171</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:36:00 Inbound Message
+----------------------------
+ID: 154265
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[757], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:35:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:36:00.4888292+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:36:00 Outbound Message
+---------------------------
+ID: 154266
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:1c40039a-292a-4fa4-a3e1-36f67c020be7</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499172</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:36:00 Inbound Message
+----------------------------
+ID: 154266
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[664], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:36:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:36:00.6728594+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:36:00 Outbound Message
+---------------------------
+ID: 154267
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:4be31a54-54a7-48d0-911f-df55a8f470f7</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499173</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:36:00 Inbound Message
+----------------------------
+ID: 154267
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[757], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:36:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:36:00.8608006+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:36:00 Outbound Message
+---------------------------
+ID: 154268
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:648cfabf-464c-4b1a-b34f-fc2cccc7a462</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499174</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:36:01 Inbound Message
+----------------------------
+ID: 154268
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[757], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:36:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:36:01.0488332+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:36:01 Outbound Message
+---------------------------
+ID: 154269
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:1143c602-4c45-4579-9dc3-39f637764944</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499175</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:36:01 Inbound Message
+----------------------------
+ID: 154269
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[664], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:36:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:36:01.2613889+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:36:01 Outbound Message
+---------------------------
+ID: 154270
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:6cee0407-a011-4fc1-8d68-33df79028363</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499176</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:36:01 Inbound Message
+----------------------------
+ID: 154270
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[664], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:36:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:36:01.4493905+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:37:00 Outbound Message
+---------------------------
+ID: 154271
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:5482eb82-1b7b-4240-b22c-c0d79c45f816</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499171</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:37:00 Inbound Message
+----------------------------
+ID: 154271
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[757], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:36:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:37:00.4467102+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:37:00 Outbound Message
+---------------------------
+ID: 154272
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:e2de682a-e315-452b-a1ec-65691875fc16</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499172</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:37:00 Inbound Message
+----------------------------
+ID: 154272
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[664], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:36:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:37:00.6306738+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:37:00 Outbound Message
+---------------------------
+ID: 154273
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:2e67193e-e344-456d-a929-8d61b897d49e</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499173</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:37:00 Inbound Message
+----------------------------
+ID: 154273
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[757], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:36:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:37:00.8153245+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:37:00 Outbound Message
+---------------------------
+ID: 154274
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:c7b0494e-b2b1-4ed9-bbea-bd34cdf6d3e8</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499174</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:37:01 Inbound Message
+----------------------------
+ID: 154274
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[757], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:37:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:37:00.9962525+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:37:01 Outbound Message
+---------------------------
+ID: 154275
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:b62f3073-bf43-409b-902e-b11c07bc8f28</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499175</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:37:01 Inbound Message
+----------------------------
+ID: 154275
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[664], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:37:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:37:01.1807974+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:37:01 Outbound Message
+---------------------------
+ID: 154276
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:fd7c4519-48ec-42c0-85a5-3068f428e275</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499176</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:37:01 Inbound Message
+----------------------------
+ID: 154276
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[664], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:37:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:37:01.3647441+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:38:00 Outbound Message
+---------------------------
+ID: 154277
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:ba4fa42b-5bf9-4c5d-b9ed-b02c9197bfbc</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499171</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:38:00 Inbound Message
+----------------------------
+ID: 154277
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[761], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:38:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:38:00.4495988+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:38:00 Outbound Message
+---------------------------
+ID: 154278
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:b010721f-9ac8-4605-9317-490da7101fab</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499172</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:38:00 Inbound Message
+----------------------------
+ID: 154278
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[666], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:38:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:38:00.6503855+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:38:00 Outbound Message
+---------------------------
+ID: 154279
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:d2572eb6-6036-455a-91a2-eb4e93eb60ae</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499173</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:38:00 Inbound Message
+----------------------------
+ID: 154279
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[761], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:38:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:38:00.8656072+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:38:00 Outbound Message
+---------------------------
+ID: 154280
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:5035772a-e276-425d-a8ec-8a0df9a98a8b</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499174</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:38:01 Inbound Message
+----------------------------
+ID: 154280
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[761], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:38:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:38:01.0616098+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+          <SetRateUnitState>
+            <UnitId>1</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:38:01 Outbound Message
+---------------------------
+ID: 154281
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:78b6c4fe-f265-4176-9c68-230b49a58072</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499175</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:38:01 Inbound Message
+----------------------------
+ID: 154281
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[666], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:38:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:38:01.2544056+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:38:01 Outbound Message
+---------------------------
+ID: 154282
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:7ce31844-e0e0-47cb-96c2-47bd4a873948</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499176</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:38:01 Inbound Message
+----------------------------
+ID: 154282
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[666], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:38:01 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:38:01.4604299+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Completed</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:52:00 Outbound Message
+---------------------------
+ID: 154283
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:d980f238-9c60-44b2-9e42-977c6d71fcc2</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75981</RoomId>
+            <RatePlanId>61794</RatePlanId>
+            <DateFrom>2019-05-15T00:00:00.000Z</DateFrom>
+            <DateTill>2019-05-15T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>6</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:52:00 Inbound Message
+----------------------------
+ID: 154283
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[552], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:51:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:52:00.6256875+02:00</TimeStamp>
+        </Status>
+        <RequestId>103499422</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:52:00 Outbound Message
+---------------------------
+ID: 154284
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:f7e873e2-054a-48fe-82a0-acd7e0c42e2e</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75981</RoomId>
+            <RatePlanId>61795</RatePlanId>
+            <DateFrom>2019-05-15T00:00:00.000Z</DateFrom>
+            <DateTill>2019-05-15T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>6</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:52:00 Inbound Message
+----------------------------
+ID: 154284
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[552], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:52:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:52:00.8697354+02:00</TimeStamp>
+        </Status>
+        <RequestId>103499423</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:52:01 Outbound Message
+---------------------------
+ID: 154285
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:23f971a7-840f-4d9d-92e7-111445ab0c8a</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>8118</HotelId>
+            <RoomId>75981</RoomId>
+            <RatePlanId>61793</RatePlanId>
+            <DateFrom>2019-05-15T00:00:00.000Z</DateFrom>
+            <DateTill>2019-05-15T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>6</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:52:01 Inbound Message
+----------------------------
+ID: 154285
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[552], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:52:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <SetMultipleOccupancyRatesResponse xmlns="XmlServices">
+      <SetMultipleOccupancyRatesResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:52:01.0896662+02:00</TimeStamp>
+        </Status>
+        <RequestId>103499424</RequestId>
+      </SetMultipleOccupancyRatesResult>
+    </SetMultipleOccupancyRatesResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:54:00 Outbound Message
+---------------------------
+ID: 154286
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:9332f151-f18b-41ca-9d0d-20e62803549f</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499422</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:54:00 Inbound Message
+----------------------------
+ID: 154286
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[664], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:53:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:54:00.4417789+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:54:00 Outbound Message
+---------------------------
+ID: 154287
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:ad23d9f8-8c54-41f4-ba78-c35a205f23b7</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499423</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:54:00 Inbound Message
+----------------------------
+ID: 154287
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[664], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:53:59 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:54:00.6258635+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 
+INFO  04-22 12:54:00 Outbound Message
+---------------------------
+ID: 154288
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/GetMultipleRatesRequestState"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/GetMultipleRatesRequestState</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:7572c212-a6cf-453f-b2f9-b5d57ba60514</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <GetMultipleRatesRequestState xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <RequestId>103499424</RequestId>
+      </request>
+    </GetMultipleRatesRequestState>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+INFO  04-22 12:54:00 Inbound Message
+----------------------------
+ID: 154288
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml; charset=utf-8
+Headers: {Cache-Control=[private, max-age=0], Content-Length=[664], content-type=[text/xml; charset=utf-8], Date=[Mon, 22 Apr 2019 04:54:00 GMT], Request-Context=[appId=cid-v1:370d703c-dae7-4233-9633-534b619e1ffe], Server=[Microsoft-IIS/10.0], X-AspNet-Version=[4.0.30319], X-Powered-By=[ASP.NET]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetMultipleRatesRequestStateResponse xmlns="XmlServices">
+      <GetMultipleRatesRequestStateResult>
+        <Status>
+          <Success>true</Success>
+          <ErrorId>0</ErrorId>
+          <TimeStamp>2019-04-22T06:54:00.8098146+02:00</TimeStamp>
+        </Status>
+        <SetRateUnitStates>
+          <SetRateUnitState>
+            <UnitId>0</UnitId>
+            <RateUnitState>Pending</RateUnitState>
+          </SetRateUnitState>
+        </SetRateUnitStates>
+      </GetMultipleRatesRequestStateResult>
+    </GetMultipleRatesRequestStateResponse>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingInInterceptor.java:106) 

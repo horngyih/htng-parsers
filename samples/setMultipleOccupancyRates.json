@@ -1,0 +1,300 @@
+{
+  "SetMultipleOccupancyRates": {
+    "_attributes": {
+      "xmlns": "XmlServices"
+    },
+    "request": {
+      "Credentials": {
+        "UserName": {
+          "_text": "kaiyeong.chua@ubicompsystem.com"
+        },
+        "Password": {
+          "_text": "!P@ssw0rd"
+        }
+      },
+      "Rates": {
+        "SetOccupancyRateUnit": [
+          {
+            "HotelId": {
+              "_text": "8118"
+            },
+            "RoomId": {
+              "_text": "75976"
+            },
+            "RatePlanId": {
+              "_text": "61795"
+            },
+            "DateFrom": {
+              "_text": "2019-04-23T00:00:00.000Z"
+            },
+            "DateTill": {
+              "_text": "2019-04-23T00:00:00.000Z"
+            },
+            "Mon": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Tue": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Wed": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Thu": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Fri": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Sat": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Sun": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "CloseOut": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Allotment": {
+              "_text": "16"
+            },
+            "MinNightStay": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "ReleaseDays": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "CloseToArrival": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "RecalculateInheritedPrices": {
+              "_text": "true"
+            },
+            "UnitId": {
+              "_text": "0"
+            }
+          },
+          {
+            "HotelId": {
+              "_text": "8118"
+            },
+            "RoomId": {
+              "_text": "75976"
+            },
+            "RatePlanId": {
+              "_text": "61795"
+            },
+            "DateFrom": {
+              "_text": "2019-04-24T00:00:00.000Z"
+            },
+            "DateTill": {
+              "_text": "2019-04-24T00:00:00.000Z"
+            },
+            "Mon": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Tue": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Wed": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Thu": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Fri": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Sat": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Sun": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "CloseOut": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Allotment": {
+              "_text": "10"
+            },
+            "MinNightStay": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "ReleaseDays": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "CloseToArrival": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "RecalculateInheritedPrices": {
+              "_text": "true"
+            },
+            "UnitId": {
+              "_text": "1"
+            }
+          },
+          {
+            "HotelId": {
+              "_text": "8118"
+            },
+            "RoomId": {
+              "_text": "75976"
+            },
+            "RatePlanId": {
+              "_text": "61795"
+            },
+            "DateFrom": {
+              "_text": "2019-04-25T00:00:00.000Z"
+            },
+            "DateTill": {
+              "_text": "2019-04-25T00:00:00.000Z"
+            },
+            "Mon": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Tue": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Wed": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Thu": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Fri": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Sat": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Sun": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "CloseOut": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "Allotment": {
+              "_text": "9"
+            },
+            "MinNightStay": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "ReleaseDays": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "CloseToArrival": {
+              "_attributes": {
+                "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+                "xsi:nil": "true"
+              }
+            },
+            "RecalculateInheritedPrices": {
+              "_text": "true"
+            },
+            "UnitId": {
+              "_text": "2"
+            }
+          }
+        ]
+      },
+      "FeedbackUrl": {
+        "_text": "https:/yp.ubicompsystem.com/avail"
+      }
+    }
+  }
+}

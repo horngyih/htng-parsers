@@ -5,7 +5,7 @@ BEGIN{
     print "timestamp|EchoToken/CorrelationID|Property Code|Booking Limit|Message Type|Start Date|End Date|Rate Plan|Room Type|xFreeSell|xArrival|xDeparture|xTA|xORG";
     delimiter="|";
 }
-/Availability Status Message/ && /HGJB/ && /DLXQ/ && /2019-04-09/{
+/Availability Status Message/{
     timestamp="2019-"$2" "$3;
     echoToken="WISHNET-Update";
     propertyCode=substr($11,0,index($11,"|")-1);

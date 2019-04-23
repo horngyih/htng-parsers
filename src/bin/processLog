@@ -14,8 +14,8 @@ const extractXML = require( path.join("..","utils","xmlExtractor"));
 
 const processingUtil = require( path.join("..","utils","processingUtils"));
 
-const availNotif = require( path.join("..","messages","otaHotelAvailNotifRQ"));
-const ratePlanNotif = require( path.join("..","messages","otaHotelRatePlanNotifRQ"));
+const availNotif = require( path.join("..","messages","htng","otaHotelAvailNotifRQ"));
+const ratePlanNotif = require( path.join("..","messages","htng","otaHotelRatePlanNotifRQ"));
 
 const _OTA_HotelAvailNotifRQ = "OTA_HotelAvailNotifRQ";
 const _OTA_HotelRatePlanNotifRQ = "OTA_HotelRatePlanNotifRQ";

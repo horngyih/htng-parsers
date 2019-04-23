@@ -23,6 +23,5 @@ program
 
 function read(){
   compact( lineStreamReader(process.stdin), program.start, program.end )
-    .pipe( ops.map( item=>item.map(i=>i.trim()).join(" ")) )
     .subscribe(console.log);
 }

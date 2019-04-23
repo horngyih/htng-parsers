@@ -10,7 +10,7 @@ const _SRC_DIR = path.resolve(_PROJECT_DIR,"src");
 const _SAMPLES_DIR = path.resolve(_PROJECT_DIR,"samples");
 
 const sampleJson = require( path.resolve(_SAMPLES_DIR,"OTA_HotelRatePlanNotifRQ.json" ) );
-const ratePlanNotif = require( path.resolve(_SRC_DIR,"messages","otaHotelRatePlanNotifRQ"));
+const ratePlanNotif = require( path.resolve(_SRC_DIR,"messages","htng","otaHotelRatePlanNotifRQ"));
 
 describe( "Test OTAHotelRatePlanNotifRQ Util",function(){
     describe("Test OTA_HotelRatePlanNotifRQ Parser",function(){

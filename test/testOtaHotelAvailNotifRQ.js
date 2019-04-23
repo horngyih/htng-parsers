@@ -9,7 +9,7 @@ const _SAMPLES_DIR = path.resolve(_PROJECT_DIR,"samples");
 
 const sampleJson = require( path.resolve(_SAMPLES_DIR,"OTA_HotelAvailNotifRQ.json" ) );
 
-const availNotif = require( path.resolve(_SRC_DIR,"messages","otaHotelAvailNotifRQ"));
+const availNotif = require( path.resolve(_SRC_DIR,"messages","htng","otaHotelAvailNotifRQ"));
 
 describe( "Test OTA_HotalAvailNotifRQ Util", function(){
     describe( "Test OTA_HotelAvailNotifRQ Parser",function(){
