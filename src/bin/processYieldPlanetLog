@@ -58,14 +58,15 @@ function dateTimeParser(value){
 }
 
 function mapMessageTypes( type ){
+    let result = "SetAvailabilityControl";
     if( type ){
         if( type.match(/rate/i) ){
-            return "SetRatePlan";
+            result = "SetRatePlan";
         } else if( type.match(/avail/i) ){
-            return "SetAvailabilityControl";
+            result = "SetAvailabilityControl";
         }
    }
-    return "SetAvailabilityControl";
+    return result;
 }
 
 function prepareTimestampFilter(){
@@ -140,16 +141,8 @@ function processLogs( files ){
     let targetFiles = [].concat(files);
     let filterPipe = prepareFilters();
     let fields = [].concat(messageFields.Common);
-    switch(program.message){
-        case "SetRatePlan":
-            fields = fields.concat(messageFields.SetRatePlan);
-            break;
-        case "SetAvailabilityControl":
-            fields = fields.concat(messageFields.SetAvailabilityControl);
-            break;
-    };
+    fields = fields.concat(messageFields[program.message]);
     console.log( fields.join( program.delimiter || "|" ) );
-
     files.forEach(
         file=>{
             compacted = compact(lineStreamReader(fs.createReadStream(file)),"INFO");
@@ -189,7 +182,7 @@ program
 .option("--roomType <value>", "Filter by Room Type Code" )
 .option("--startDate <value>", "Filter by Start Date (on or after start date)", dateParser )
 .option("--endDate <value>", "Filter be End Date ( on or before end date)", dateParser )
-.option("-m, --message <value>", "Filter for Message Type", mapMessageTypes )
+.option("-m, --message <value>", "Filter for Message Type", mapMessageTypes, "SetAvailabilityControl" )
 .option("-f, --from <value>", "Message sent after this timestamp", dateTimeParser )
 .option("-t, --to <value>", "Message sent before this timestamp", dateTimeParser )
 .action(
