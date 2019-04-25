@@ -57,6 +57,10 @@ function dateTimeParser(value){
     }
 }
 
+function bool(val){
+    return val;
+}
+
 function mapMessageTypes( type ){
     let result = "SetAvailabilityControl";
     if( type ){
@@ -137,39 +141,47 @@ function prepareFilters(){
     return filterPipe.filter(i=>i);
 }
 
+function getFields(){
+    let fields = [].concat(messageFields.Common);
+    fields = fields.concat(messageFields[program.message]);
+    return fields;
+ }
+
 function processLogs( files ){
     let targetFiles = [].concat(files);
     let filterPipe = prepareFilters();
-    let fields = [].concat(messageFields.Common);
-    fields = fields.concat(messageFields[program.message]);
-    console.log( fields.join( program.delimiter || "|" ) );
+    console.log( getFields().join( program.delimiter || "|" ) );
     files.forEach(
         file=>{
-            compacted = compact(lineStreamReader(fs.createReadStream(file)),"INFO");
-            messages = compacted.pipe( ...messageUtils.parseXMLPipe(messageTypes) );
-            let partitioned = messages.pipe(
-                partition(i=>i.messageType === "SetRatePlan")
-            );
-
-            let targetStream = partitioned[1];
-            switch( program.message ){
-                case "SetRatePlan":
-                    targetStream = partitioned[0];
-                    break;
-                case "SetAvailabilityControl":
-                    targetStream = partitioned[1];
-                    break;
-            };
-
-            if( targetStream ){
-               targetStream 
-                    .pipe( ...prepareFilters() )
-                    .pipe( ...messageUtils.tabulateLine( messageTypes.SetMultipleOccupancyRates.formatters, fields, program.delimiter||"|" ) )
-                    .subscribe(console.log);
-            }
-        }
+            processStream(fs.createReadStream(file));
+       }
     );
 }
+
+function processStream( stream ){
+    let compacted = compact(lineStreamReader(stream),"INFO");
+    messages = compacted.pipe( ...messageUtils.parseXMLPipe(messageTypes) );
+    let partitioned = messages.pipe(
+        partition(i=>i.messageType === "SetRatePlan")
+    );
+
+    let targetStream = partitioned[1];
+    switch( program.message ){
+        case "SetRatePlan":
+            targetStream = partitioned[0];
+            break;
+        case "SetAvailabilityControl":
+            targetStream = partitioned[1];
+            break;
+    };
+
+    if( targetStream ){
+        targetStream 
+            .pipe( ...prepareFilters() )
+            .pipe( ...messageUtils.tabulateLine( messageTypes.SetMultipleOccupancyRates.formatters, getFields(), program.delimiter||"|" ) )
+        .subscribe(console.log);
+    }
+ }
 
 program
 .version(package.version)
