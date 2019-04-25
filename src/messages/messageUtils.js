@@ -1,7 +1,7 @@
 const {from} = require("rxjs");
 const path = require("path");
 const util = require(path.join("..", "utils", "processingUtils");
-const Log4JEventParser = require(path.join("..","utils","log4JEventParser"));
+const Log4JEventParser = require(path.join("..","utils","log4jEventParser"));
 const { map, filter, take, mergeAll } = require("rxjs/operators");
 const xmljs = require("xml-js");
 
