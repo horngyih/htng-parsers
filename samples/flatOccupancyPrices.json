@@ -1,0 +1,200 @@
+[
+  {
+    "HotelId": "8118",
+    "RoomId": "75980",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-04-23T00:00:00.000Z",
+    "single": "166.500000",
+    "double": "166.500000",
+    "triple": "166.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75980",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-12-31T00:00:00.000Z",
+    "single": "166.500000",
+    "double": "166.500000",
+    "triple": "166.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75981",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-04-23T00:00:00.000Z",
+    "single": "112.500000",
+    "double": null,
+    "triple": null,
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75981",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-12-31T00:00:00.000Z",
+    "single": "112.500000",
+    "double": null,
+    "triple": null,
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75977",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-04-23T00:00:00.000Z",
+    "single": "139.500000",
+    "double": "139.500000",
+    "triple": "139.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75977",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-12-31T00:00:00.000Z",
+    "single": "139.500000",
+    "double": "139.500000",
+    "triple": "139.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75975",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-04-23T00:00:00.000Z",
+    "single": "148.500000",
+    "double": "148.500000",
+    "triple": "148.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75975",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-12-31T00:00:00.000Z",
+    "single": "148.500000",
+    "double": "148.500000",
+    "triple": "148.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75976",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-04-23T00:00:00.000Z",
+    "single": "139.500000",
+    "double": "139.500000",
+    "triple": "139.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75976",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-12-31T00:00:00.000Z",
+    "single": "139.500000",
+    "double": "139.500000",
+    "triple": "139.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75974",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-04-23T00:00:00.000Z",
+    "single": "148.500000",
+    "double": "148.500000",
+    "triple": "148.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75974",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-12-31T00:00:00.000Z",
+    "single": "148.500000",
+    "double": "148.500000",
+    "triple": "148.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75984",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-04-23T00:00:00.000Z",
+    "single": "121.500000",
+    "double": "121.500000",
+    "triple": "121.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75984",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-12-31T00:00:00.000Z",
+    "single": "121.500000",
+    "double": "121.500000",
+    "triple": "121.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75982",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-04-23T00:00:00.000Z",
+    "single": "130.500000",
+    "double": "130.500000",
+    "triple": "130.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75982",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-12-31T00:00:00.000Z",
+    "single": "130.500000",
+    "double": "130.500000",
+    "triple": "130.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75983",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-04-23T00:00:00.000Z",
+    "single": "130.500000",
+    "double": "130.500000",
+    "triple": "130.500000",
+    "quad": null
+  },
+  {
+    "HotelId": "8118",
+    "RoomId": "75983",
+    "RatePlanId": "61794",
+    "DateFrom": "2019-04-23T00:00:00.000Z",
+    "DateTill": "2019-12-31T00:00:00.000Z",
+    "single": "130.500000",
+    "double": "130.500000",
+    "triple": "130.500000",
+    "quad": null
+  }
+]

@@ -1,0 +1,139 @@
+INFO  04-23 02:52:01 Outbound Message
+---------------------------
+ID: 157172
+Address: https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=["XmlServices/SetMultipleOccupancyRates"]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">XmlServices/SetMultipleOccupancyRates</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:c5a6e019-4a8b-4714-b064-e07e6d253dc0</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://secure.yieldplanet.com/XmlServices/ChannelManager.asmx</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </soap:Header>
+  <soap:Body>
+    <SetMultipleOccupancyRates xmlns="XmlServices">
+      <request>
+        <Credentials>
+          <UserName>kaiyeong.chua@ubicompsystem.com</UserName>
+          <Password>!P@ssw0rd</Password>
+        </Credentials>
+        <Rates>
+          <SetOccupancyRateUnit>
+            <HotelId>7592</HotelId>
+            <RoomId>67787</RoomId>
+            <RatePlanId>55985</RatePlanId>
+            <DateFrom>2019-04-23T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-24T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut>true</CloseOut>
+            <Allotment>-4</Allotment>
+            <MinNightStay>0</MinNightStay>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival>true</CloseToArrival>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>0</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>7592</HotelId>
+            <RoomId>67787</RoomId>
+            <RatePlanId>55985</RatePlanId>
+            <DateFrom>2019-04-25T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-25T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut>true</CloseOut>
+            <Allotment>-3</Allotment>
+            <MinNightStay>0</MinNightStay>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival>true</CloseToArrival>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>1</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>7592</HotelId>
+            <RoomId>67787</RoomId>
+            <RatePlanId>55985</RatePlanId>
+            <DateFrom>2019-04-26T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-27T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut>true</CloseOut>
+            <Allotment>-2</Allotment>
+            <MinNightStay>0</MinNightStay>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival>true</CloseToArrival>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>2</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>7592</HotelId>
+            <RoomId>67787</RoomId>
+            <RatePlanId>55985</RatePlanId>
+            <DateFrom>2019-04-28T00:00:00.000Z</DateFrom>
+            <DateTill>2019-04-29T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>3</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>3</UnitId>
+          </SetOccupancyRateUnit>
+          <SetOccupancyRateUnit>
+            <HotelId>7592</HotelId>
+            <RoomId>67787</RoomId>
+            <RatePlanId>55985</RatePlanId>
+            <DateFrom>2019-04-30T00:00:00.000Z</DateFrom>
+            <DateTill>2019-05-05T00:00:00.000Z</DateTill>
+            <Mon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Tue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Wed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Thu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Fri xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Sun xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseOut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <Allotment>4</Allotment>
+            <MinNightStay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <ReleaseDays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <CloseToArrival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            <RecalculateInheritedPrices>true</RecalculateInheritedPrices>
+            <UnitId>4</UnitId>
+          </SetOccupancyRateUnit>
+        </Rates>
+        <FeedbackUrl>https:/yp.ubicompsystem.com/avail</FeedbackUrl>
+      </request>
+    </SetMultipleOccupancyRates>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------  (YieldPlanetLoggingOutInterceptor.java:104) 
+I

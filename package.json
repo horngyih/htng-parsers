@@ -8,6 +8,7 @@
   },
   "bin": {
     "processLog": "src/bin/processLog",
+    "processYieldPlanetLog" : "src/bin/processYieldPlanetLog",
     "parseSaveProductAllocations": "src/bin/parseSaveProductAllocations",
     "buferedReaer": "src/bin/bufferedReader",
     "jscompact": "src/bin/jscompact"

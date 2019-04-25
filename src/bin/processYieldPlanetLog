@@ -1,0 +1,200 @@
+#! /usr/bin/env node
+/* jshint esversion:6 */
+
+const fs = require("fs");
+const path = require("path");
+const program = require("commander");
+const xmljs = require("xml-js");
+const moment = require("moment");
+
+const {map,filter,take, partition} = require("rxjs/operators");
+
+const messageTypes = require(path.join("..","messages","yieldplanet","messageTypes"));
+const messageUtils = require(path.join("..","messages","messageUtils"));
+
+const {lineStreamReader} = require(path.join("..","utils","lineReader"));
+const {compact} = require(path.join("..","utils","compactor"));
+
+const package = require(path.join("..","..","package.json"));
+
+const messageFields = {
+    "Common" : [
+        "timestamp",
+        "propertyCode",
+        "ratePlan",
+        "roomType",
+        "startDate",
+        "endDate"
+    ],
+    "SetRatePlan" : [
+        "single",
+        "doubleRate",
+        "triple",
+        "quad"
+    ],
+    "SetAvailabilityControl" : [
+        "bookingLimit",
+        "xFreesell",
+        "xArrival",
+        "xTA",
+        "xOrg"
+    ]
+};
+
+function dateParser(value){
+    if( value ){
+        return moment(value, "YYYY-MM-DD" );
+    } else {
+        return value;
+    }
+}
+
+function dateTimeParser(value){
+    if( value ) {
+        return moment(value, "YYYY-MM-DD HH:mm:ss" );
+    } else {
+        return value;
+    }
+}
+
+function mapMessageTypes( type ){
+    if( type ){
+        if( type.match(/rate/i) ){
+            return "SetRatePlan";
+        } else if( type.match(/avail/i) ){
+            return "SetAvailabilityControl";
+        }
+   }
+    return "SetAvailabilityControl";
+}
+
+function prepareTimestampFilter(){
+    let from = program.from;
+    let to = program.to;
+    if( from || to ){
+        return filter(i=>{
+          let onOrAfterFrom = (from)?i.timestamp.isSameOrAfter(from):true;
+          let onOrBeforeTo = (to)?i.timestamp.isSameOrBefore(to):true;
+          return onOrAfterFrom && onOrBeforeTo;
+        });
+    }
+    return null;
+}
+
+function preparePropertyCodeFilter(){
+    if( program.propertyCode ){
+        let propertyCode= program.propertyCode;
+        return filter(i=>{
+            return i.propertyCode && i.propertyCode === propertyCode;
+        });
+    }
+    return null;
+}
+
+function prepareRateCodeFilter(){
+    if( program.rateCode ){
+        let rateCode = program.rateCode;
+        return filter(i=>{
+            return i.ratePlan.toLowerCase() === rateCode.toLowerCase();
+        });
+    }
+    return null;
+}
+
+function prepareRoomTypeFilter(){
+    if( program.roomType ){
+        let roomType = program.roomType;
+        return filter(i=>{
+            return i.roomType.toLowerCase() === roomType.toLowerCase();
+        });
+    } else {
+        return null;
+    }
+}
+
+function prepareStartEndDateFilter(){
+    let start = program.startDate;
+    let end = program.endDate;
+    if( start || end ){
+        return filter(i=>{
+            let onOrAfterStart = (start)?i.startDate.isSameOrAfter(start):true;
+            let onOrBeforeEnd = (end)?i.endDate.isSameOrBefore(end):true;
+            return onOrAfterStart && onOrBeforeEnd;
+        });
+    }
+    return null;
+}
+
+
+function prepareFilters(){
+    let filterPipe = [];
+    filterPipe.push(preparePropertyCodeFilter());
+    filterPipe.push(prepareTimestampFilter());
+    filterPipe.push(prepareRateCodeFilter());
+    filterPipe.push(prepareRoomTypeFilter());
+    filterPipe.push(prepareStartEndDateFilter());
+    return filterPipe.filter(i=>i);
+}
+
+function processLogs( files ){
+    let targetFiles = [].concat(files);
+    let filterPipe = prepareFilters();
+    let fields = [].concat(messageFields.Common);
+    switch(program.message){
+        case "SetRatePlan":
+            fields = fields.concat(messageFields.SetRatePlan);
+            break;
+        case "SetAvailabilityControl":
+            fields = fields.concat(messageFields.SetAvailabilityControl);
+            break;
+    };
+    console.log( fields.join( program.delimiter || "|" ) );
+
+    files.forEach(
+        file=>{
+            compacted = compact(lineStreamReader(fs.createReadStream(file)),"INFO");
+            messages = compacted.pipe( ...messageUtils.parseXMLPipe(messageTypes) );
+            let partitioned = messages.pipe(
+                partition(i=>i.messageType === "SetRatePlan")
+            );
+
+            let targetStream = partitioned[1];
+            switch( program.message ){
+                case "SetRatePlan":
+                    targetStream = partitioned[0];
+                    break;
+                case "SetAvailabilityControl":
+                    targetStream = partitioned[1];
+                    break;
+            };
+
+            if( targetStream ){
+               targetStream 
+                    .pipe( ...prepareFilters() )
+                    .pipe( ...messageUtils.tabulateLine( messageTypes.SetMultipleOccupancyRates.formatters, fields, program.delimiter||"|" ) )
+                    .subscribe(console.log);
+            }
+        }
+    );
+}
+
+program
+.version(package.version)
+.usage("[options] <filename>")
+.arguments("<filename...>")
+.option("-o, --output <value>", "Output file")
+.option("-d, --delimiter <value>", "Output delimiter")
+.option("-p, --propertyCode <value>", "Filter by propertyCode" )
+.option("--rateCode <value>", "Filter by Rate Plan Code" )
+.option("--roomType <value>", "Filter by Room Type Code" )
+.option("--startDate <value>", "Filter by Start Date (on or after start date)", dateParser )
+.option("--endDate <value>", "Filter be End Date ( on or before end date)", dateParser )
+.option("-m, --message <value>", "Filter for Message Type", mapMessageTypes )
+.option("-f, --from <value>", "Message sent after this timestamp", dateTimeParser )
+.option("-t, --to <value>", "Message sent before this timestamp", dateTimeParser )
+.action(
+    (filename)=>{
+        processLogs(filename);
+})
+.parse(process.argv);
+

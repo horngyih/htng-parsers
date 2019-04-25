@@ -32,6 +32,8 @@ function numberFormatter(){
             try{
                 return parseInt(target);
             } catch(error){}
+        } else {
+            return "--"
         }
         return target;
     }

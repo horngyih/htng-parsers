@@ -4,54 +4,49 @@ const path = require("path");
 const moment = require("moment");
 const util = require(path.join("..","..","utils","processingUtils"));
 
-function SetMultipleOccupancyRates(){
+function SetMultipleOccupancyRates(timestamp){
     this.type = "SetMultipleOccupancyRates";
-    this.messageContentCode = null;
-    this.echoToken = null;
-    this.timestamp = null;
-    this.correlationID = null;
+    this.timestamp = timestamp;
     this.propertyCode = null;
 }
 
 let dataFormatters = {
     type : util.stringFormatter(),
-    messageContentCode : util.numberFormatter(),
-    echoToken : util.stringFormatter(),
+    messageType : util.stringFormatter(),
     timestamp : util.dateFormatter("YYYY-MM-DD HH:mm:ss.SSS"),
-    correlationID : util.stringFormatter(),
     propertyCode : util.stringFormatter(),
     startDate : util.dateFormatter("YYYY-MM-DD"),
     endDate : util.dateFormatter("YYYY-MM-DD"),
     ratePlan : util.stringFormatter(),
     roomType : util.stringFormatter(),
-    bookingLimit : util.stringFormatter(),
+    bookingLimit : util.numberFormatter(),
     bookingLimitMessageType : util.stringFormatter(),
     xFreesell : util.booleanFormatter(),
     xArrival : util.booleanFormatter(),
     xTA : util.booleanFormatter(),
     xOrg : util.booleanFormatter(),
     single : util.numberFormatter(),
-    double : util.numberFormatter(),
+    doubleRate : util.numberFormatter(),
     triple : util.numberFormatter(),
     quad : util.numberFormatter()
 };
 
-function parseSetMultipleOccupancyRates(json){
-    let result = new SetMultipleOccupancyRates();
-    result = Object.assign(result, parse(json));
+function parseSetMultipleOccupancyRates(json, timestamp ){
+    let result = new SetMultipleOccupancyRates(timestamp);
+    result = Object.assign( result, parse(json));
     return result;
 }
 
-function flattenSetMultipleOccupancyRates(json){
+function flattenSetMultipleOccupancyRates(json, timestamp ){
     let setMultipleOccupancyRates = null;
     if( json instanceof SetMultipleOccupancyRates ){
         setMultipleOccupancyRates = json;
     } else {
-        setMultipleOccupancyRates = parseSetMultipleOccupancyRates(json);
+        setMultipleOccupancyRates = parseSetMultipleOccupancyRates(json, timestamp );
     }
 
     if( setMultipleOccupancyRates instanceof SetMultipleOccupancyRates ){
-        return [].concat(setMultipleOccupancyRates.setOccupancyRateUnits);
+        return [].concat(setMultipleOccupancyRates.setOccupancyRateUnits).map(item=>Object.assign({}, item, {timestamp : setMultipleOccupancyRates.timestamp}));
     }
 }
 
@@ -60,7 +55,7 @@ function parse(json){
     let rootElement = getRootElement(json);
     if( rootElement ){
         let occupancyRateUnits = rootElement.request.Rates.SetOccupancyRateUnit;
-        result.setOccupancyRateUnits = [].concat(occupancyRateUnits.map(parseOccupancyRateUnits));
+        result.setOccupancyRateUnits = [].concat(([].concat(occupancyRateUnits)).map(parseOccupancyRateUnits));
     }
     return result;
 }
@@ -77,19 +72,20 @@ function parseOccupancyRateUnits(occupancyRateUnit){
 
     let occupancyPrices = getOccupancyPrices(occupancyRateUnit);
     if( occupancyPrices ){
-        result = Object.assign({}, result, occupancyPrices, { type : "SetRatePlan" } );
+        result = Object.assign({}, result, occupancyPrices, { messageType : "SetRatePlan" } );
     } else {
         result = Object.assign({},
             result,
+            { bookingLimit : getAllotment(occupancyRateUnit) },
             { xFreesell : getCloseOut(occupancyRateUnit) === "true" },
             { xArrival : getCloseToArrival(occupancyRateUnit) === "true" },
             { xDeparture : null === "true" },
             { xTA : null === "true" },
             { xOrg : null === "true" },
-            { type : "SetAvailabilityControl" }
+            { messageType : "SetAvailabilityControl" }
         );
     }
-    return result;
+    return Object.assign({}, {type:"SetMultipleOccupancyRates"}, result );
 }
 
 function flattenOccupancyPrices(occupancyPrices){
@@ -107,7 +103,7 @@ function flattenOccupancyPrices(occupancyPrices){
         return Object.assign(
             {},
             { single : reduction["1"]||null },
-            { double : reduction["2"]||null },
+            { doubleRate : reduction["2"]||null },
             { triple : reduction["3"]||null },
             { quad : reduction["4"]||null }
         );
@@ -137,7 +133,7 @@ function getOccupancyPrices(occupancyRateUnit){
             return Object.assign(
                 {},
                 { single : reduction["1"]||null },
-                { double : reduction["2"]||null },
+                { doubleRate : reduction["2"]||null },
                 { triple : reduction["3"]||null },
                 { quad : reduction["4"]||null }
             );
@@ -212,7 +208,7 @@ function getDateTill(occupancyRateUnit){
 function getCloseOut(occupancyRateUnit){
     if( occupancyRateUnit ){
         if( occupancyRateUnit.CloseOut ){
-            return extractAttributeValue(occupancyRateUnit.CloseOut);
+            return extractText(occupancyRateUnit.CloseOut);
         }
     }
     return null;
@@ -230,7 +226,7 @@ function getAllotment(occupancyRateUnit){
 function getCloseToArrival(occupancyRateUnit){
     if( occupancyRateUnit ){
         if( occupancyRateUnit.CloseToArrival ){
-            return extractAttributeValue(occupancyRateUnit.CloseToArrival);
+            return extractText(occupancyRateUnit.CloseToArrival);
         }
     }
     return null;
@@ -239,7 +235,7 @@ function getCloseToArrival(occupancyRateUnit){
 function getMinLOS(occupancyRateUnit){
     if( occupancyRateUnit ){
         if( occupancyRateUnit.MinNightStay ){
-            return extractAttributeValue(occupancyRateUnit.MinNightStay);
+            return extractText(occupancyRateUnit.MinNightStay);
         }
     }
     return null;
@@ -253,18 +249,6 @@ function extractText(element){
     }
     return null;
 }
-
-function extractAttributeValue(element){
-    if( element ){
-        if( element._attributes ){
-            if( element._attributes["xsi:nil"] ){
-                return element._attributes["xsi:nil"];
-            }
-        }
-    }
-    return null;
-}
-
 
 function getRootElement(json){
     if(typeof json === "object"){
