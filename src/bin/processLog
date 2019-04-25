@@ -57,6 +57,10 @@ program
 })
 .parse(process.argv);
 
+if( program.args.length == 0 ){
+    program.outputHelp();
+}
+
 function processLogs(files, messageType ){
     program.message = mapMessageType(program.message);
     var targetFiles = [];

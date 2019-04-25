@@ -147,15 +147,24 @@ function getFields(){
     return fields;
  }
 
+function printHeader(){
+    console.log( getFields().join( program.delimiter || "|" ) );
+}
+
 function processLogs( files ){
     let targetFiles = [].concat(files);
     let filterPipe = prepareFilters();
-    console.log( getFields().join( program.delimiter || "|" ) );
+    printHeader();
     files.forEach(
         file=>{
             processStream(fs.createReadStream(file));
        }
     );
+}
+
+function processStdin(){
+    printHeader();
+    processStream( process.stdin );
 }
 
 function processStream( stream ){
@@ -197,9 +206,17 @@ program
 .option("-m, --message <value>", "Filter for Message Type", mapMessageTypes, "SetAvailabilityControl" )
 .option("-f, --from <value>", "Message sent after this timestamp", dateTimeParser )
 .option("-t, --to <value>", "Message sent before this timestamp", dateTimeParser )
+.option("--tail", "Process stdin" )
 .action(
     (filename)=>{
         processLogs(filename);
 })
 .parse(process.argv);
 
+if( program.args.length === 0 ){
+    if( program.tail ){
+        processStdin();
+    } else {
+        program.outputHelp();
+    }
+}
