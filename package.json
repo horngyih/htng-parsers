@@ -9,7 +9,7 @@
   "bin": {
     "processLog": "src/bin/processLog",
     "processYieldPlanetLog": "src/bin/processYieldPlanetLog",
-    "retrieveInterfaceCodeMapping", "src/bin/retrieveInterfaceCodeMapping",
+    "retrieveInterfaceCodeMapping": "src/bin/retrieveInterfaceCodeMapping",
     "parseSaveProductAllocations": "src/bin/parseSaveProductAllocations",
     "buferedReaer": "src/bin/bufferedReader",
     "jscompact": "src/bin/jscompact"
