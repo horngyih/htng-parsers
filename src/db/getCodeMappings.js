@@ -46,7 +46,7 @@ function processRows( rows ){
            }).reduce( (obj, mappings)=> Object.assign({}, obj, ...mappings), {} );
             return obj;
         }, {});
-        obj[propertyMapped[key]||key] = codeMaps;
+        obj[propertyMapped[key]||key] = Object.assign({}, codeMaps, { PROPERTY : key } );
         return obj;
     }, {});
     return propertyCodeMap;
