@@ -8,7 +8,8 @@
   },
   "bin": {
     "processLog": "src/bin/processLog",
-    "processYieldPlanetLog" : "src/bin/processYieldPlanetLog",
+    "processYieldPlanetLog": "src/bin/processYieldPlanetLog",
+    "retrieveInterfaceCodeMapping", "src/bin/retrieveInterfaceCodeMapping",
     "parseSaveProductAllocations": "src/bin/parseSaveProductAllocations",
     "buferedReaer": "src/bin/bufferedReader",
     "jscompact": "src/bin/jscompact"
@@ -19,6 +20,7 @@
     "commander": "^2.20.0",
     "moment": "^2.24.0",
     "npm": "^6.9.0",
+    "pg": "^7.10.0",
     "rxjs": "^6.4.0",
     "xml-js": "^1.6.11"
   },

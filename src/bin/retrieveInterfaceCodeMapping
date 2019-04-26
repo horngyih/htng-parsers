@@ -1,0 +1,104 @@
+#! /usr/bin/env node
+
+const pg = require("pg");
+const path = require("path");
+const fs = require("fs");
+const readline = require("readline");
+const { selectCodeTypesByChannelCode } = require(path.join("..","db","integrationQueries"));
+const processRows = require(path.join("..","db","getCodeMappings"));
+
+const program = require("commander");
+
+const package = require(path.join("..","..","package.json"));
+
+program
+.version(package.version)
+.usage("[options] <codeTypes>")
+.arguments("<codeTypes...>")
+.option("-U, --username <value>", "Database Username" )
+.option("-W, --password <value>", "Database Password", process.env.PGPASSWORD || process.env.DB_PASSWORD )
+.option("-p, --port <value>", "Database Port" )
+.option("-h, --host <value", "Database Host" )
+.option("-d, --database <value>", "Database Name" )
+.option("-f, --filename <value>", "Output Filename" )
+.option("--channel <value>", "Channel Code", "YPLANET" )
+.option("-v, --verbose", "Vebose" )
+.action(
+    (codeTypes)=>{
+        execute(codeTypes);
+    })
+.parse(process.argv);
+
+if( !program.args || program.args.length <=0 ){
+    execute(["ROOM", "RATEPLAN"]);
+}
+
+function getURL(){
+    const dbhost = program.host || process.env.DB_HOST || "postgres";
+    const port = program.port || process.env.DB_PORT || "5432";
+    const username = program.username || process.env.DB_USER || "postgres";
+    const database = program.database || process.env.DB_NAME || "Interface";
+
+    if( program.verbose ){
+        console.log( "Connect to " );
+        console.log( `Host : ${dbhost}` );
+        console.log( `Port : ${port}` );
+        console.log( `Username : ${username}` );
+        console.log( `Database : ${database}` );
+    }
+    return `postgres://${(username)?username+"@":''}${dbhost}${(port)?":"+port:""}/${database}`;
+}
+
+function execute(codeTypes){
+    const type = [].concat(codeTypes);
+    if( !program.password ){
+        promptPassword(codeTypes);
+    } else {
+        connect( codeTypes, getURL(), program.password );
+    }
+}
+
+function promptPassword(codeTypes){
+    let prompt = readline.createInterface({input: process.stdin, output: process.stdout});
+    let proceed = (password)=>{
+        if( password && password.trim() ){
+            connect( codeTypes, getURL(), password );
+            prompt.close();
+        } else {
+            ask();
+        }
+    };
+
+    let ask = ()=>{
+        prompt.question("password:", proceed);
+    };
+    ask();
+}
+
+function connect( codeTypes, url, password ){
+    if( program.verbose ){
+        console.log( "Connect..." );
+        console.log( "Connecting... " + url );
+    }
+
+    let client = new pg.Client({ connectionString:url, password:password});
+    client.connect().then(()=>executeQuery(client, codeTypes)).catch(console.log);    
+}
+
+function executeQuery( client, codeTypes ){
+    if( client && client.query ){
+        client.query( selectCodeTypesByChannelCode( codeTypes, program.channel ) ).then(processResults).then(()=>client.end());
+    }
+}
+
+function processResults( result ){
+    let codeMapping = JSON.stringify(processRows(result.rows));
+    if( program.filename ){
+        if( program.verbose ){
+            console.log( "Output to : " + program.filename );
+        }
+        fs.writeFileSync( program.filename, codeMapping ); 
+    } else {
+        console.log(codeMapping);
+    }
+}
