@@ -1,0 +1,23 @@
+{
+  "SetMultipleOccupancyRatesResponse": {
+    "_attributes": {
+      "xmlns": "XmlServices"
+    },
+    "SetMultipleOccupancyRatesResult": {
+      "Status": {
+        "Success": {
+          "_text": "true"
+        },
+        "ErrorId": {
+          "_text": "0"
+        },
+        "TimeStamp": {
+          "_text": "2019-04-22T06:17:00.9941262+02:00"
+        }
+      },
+      "RequestId": {
+        "_text": "103498981"
+      }
+    }
+  }
+}

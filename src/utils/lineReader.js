@@ -34,7 +34,7 @@ function lineStreamReader(stream){
         let buffer = '';
         stream.on( "data", data=>{
             buffer += data;
-            let lines = buffer.split("\n");
+            let lines = buffer.split(/(?:\r\n)|(?:\r)/);
             buffer = lines.pop();
             lines.forEach(line=>subject.next(line));
         });

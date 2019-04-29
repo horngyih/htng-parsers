@@ -14,7 +14,6 @@ function correlate( observable, correlation, maxCount ){
                         let group = correlationMap[key]||[];
                         group.push(line);
                         if( group.length >= maxCount ){
-                            console.log( "Next : ", group );
                             subject.next(group);
                             delete correlationMap[key];
                         }
