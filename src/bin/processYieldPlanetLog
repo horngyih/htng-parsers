@@ -7,19 +7,28 @@ const program = require("commander");
 const xmljs = require("xml-js");
 const moment = require("moment");
 
-const {map,filter,take, partition} = require("rxjs/operators");
+const {from} = require("rxjs");
+const {map,mergeAll,filter,take,partition,reduce} = require("rxjs/operators");
 
 const messageTypes = require(path.join("..","messages","yieldplanet","messageTypes"));
 const messageUtils = require(path.join("..","messages","messageUtils"));
 
 const {lineStreamReader} = require(path.join("..","utils","lineReader"));
 const {compact} = require(path.join("..","utils","compactor"));
+const correlate = require(path.join("..","utils","correlator"));
 
 const package = require(path.join("..","..","package.json"));
 
+const idKey = /(?:ID:\s)(\d+)(?:\s)/; //Regular expression for extracting message IDs for correlation
+
+//Message fields to be printed out in tabulation
 const messageFields = {
     "Common" : [
         "timestamp",
+        "requestID",
+        "unitID",
+        "errorID",
+        "status",
         "propertyCode",
         "ratePlan",
         "roomType",
@@ -41,6 +50,7 @@ const messageFields = {
     ]
 };
 
+//Parser for date type options
 function dateParser(value){
     if( value ){
         return moment(value, "YYYY-MM-DD" );
@@ -49,6 +59,7 @@ function dateParser(value){
     }
 }
 
+//Parser for datetime type options
 function dateTimeParser(value){
     if( value ) {
         return moment(value, "YYYY-MM-DD HH:mm:ss" );
@@ -57,10 +68,12 @@ function dateTimeParser(value){
     }
 }
 
+//Parser for boolean type options
 function bool(val){
     return val;
 }
 
+//Handler for message types 
 function mapMessageTypes( type ){
     let result = "SetAvailabilityControl";
     if( type ){
@@ -73,6 +86,7 @@ function mapMessageTypes( type ){
     return result;
 }
 
+//Returns a RXJS Filter function for Timestamp filtering
 function prepareTimestampFilter(){
     let from = program.from;
     let to = program.to;
@@ -86,6 +100,7 @@ function prepareTimestampFilter(){
     return null;
 }
 
+//Returns a RXJS Filter function for Property Code filtering
 function preparePropertyCodeFilter(){
     if( program.propertyCode ){
         let propertyCode= program.propertyCode;
@@ -96,6 +111,7 @@ function preparePropertyCodeFilter(){
     return null;
 }
 
+//Returns a RXJS Filter function for RatePlan filtering
 function prepareRateCodeFilter(){
     if( program.rateCode ){
         let rateCode = program.rateCode;
@@ -106,6 +122,7 @@ function prepareRateCodeFilter(){
     return null;
 }
 
+//Returns a RXJS Filter function for RoomType filtering
 function prepareRoomTypeFilter(){
     if( program.roomType ){
         let roomType = program.roomType;
@@ -117,6 +134,7 @@ function prepareRoomTypeFilter(){
     }
 }
 
+//Returns a RXJS Filter function for Start and End Date filtering
 function prepareStartEndDateFilter(){
     let start = program.startDate;
     let end = program.endDate;
@@ -131,6 +149,7 @@ function prepareStartEndDateFilter(){
 }
 
 
+//Read and prepare a sequence of filters for the parsed results
 function prepareFilters(){
     let filterPipe = [];
     filterPipe.push(preparePropertyCodeFilter());
@@ -141,35 +160,83 @@ function prepareFilters(){
     return filterPipe.filter(i=>i);
 }
 
+// Prepare the output fields requested for print out
 function getFields(){
     let fields = [].concat(messageFields.Common);
     fields = fields.concat(messageFields[program.message]);
     return fields;
  }
 
+// Print the table header for the output fields request
 function printHeader(){
     console.log( getFields().join( program.delimiter || "|" ) );
 }
 
+//Main Execution function -- process the files provided as a stream and output parsed results;
 function processLogs( files ){
     let targetFiles = [].concat(files);
     let filterPipe = prepareFilters();
     printHeader();
     files.forEach(
         file=>{
-            processStream(fs.createReadStream(file));
+            processStream(fs.createReadStream(file)).subscribe(console.log);
        }
     );
 }
 
+// Alternative Execution function -- process stdin stream as a stream and output the parsed results
 function processStdin(){
     printHeader();
-    processStream( process.stdin );
+    processStream( process.stdin )
+    .subscribe(console.log);
 }
 
+// Process the steam of lines read and parse them for Availability/RatePlan messages for output
 function processStream( stream ){
     let compacted = compact(lineStreamReader(stream),"INFO");
-    messages = compacted.pipe( ...messageUtils.parseXMLPipe(messageTypes) );
+    correlated = correlate(compacted, line=>(line.match(idKey)||["","noID"])[1], 2 );
+    let messagePatterns = [/inbound/i, /outbound/i];
+    let messages = correlated.pipe(
+        map(group=>{
+            return from(group).pipe( 
+                ...messageUtils.parseXMLPipe(messageTypes), 
+                reduce( (arr,message)=>(arr||[]).concat(message), [] ) 
+            );
+        }),
+        mergeAll(),
+        filter(i=>i&&i.length>0),
+        map(i=>{
+            if( Array.isArray(i) ){
+                let messageByType = i.reduce( (map,message)=>{
+                map = map || {};
+                let messages = map[message.type]||[];
+                messages.push(message);
+                map[message.type]=messages;
+                return map;
+                }, {});
+   
+                let response = messageByType["SetMultipleOccupancyRatesResponse"][0];
+                return from(
+                    Object.keys(messageByType)
+                        .filter(type=>type!=="SetMultipleOccupancyRatesResponse")
+                        .reduce( (arr,type)=>{
+                            return arr.concat(
+                                messageByType[type]
+                                    .map(i=>Object.assign(
+                                        {}, 
+                                        i, 
+                                        {requestID:response.requestID}, 
+                                        {status:(response.success)?"SUCCESS":"FAILED"},
+                                        {errorID:response.errorID}
+                                    )
+                            ));
+                        }, [])
+                );
+            } 
+            return i;
+        }),
+        mergeAll()
+    );
     let partitioned = messages.pipe(
         partition(i=>i.messageType === "SetRatePlan")
     );
@@ -197,7 +264,7 @@ function processStream( stream ){
     };
 
     if( targetStream ){
-        targetStream 
+       return targetStream 
             .pipe( ...prepareFilters() )
             .pipe( map(i=>{ 
                 if( program.codeMapping ){
@@ -212,7 +279,8 @@ function processStream( stream ){
                return i;
             } ) )
             .pipe( ...messageUtils.tabulateLine( messageTypes.SetMultipleOccupancyRates.formatters, getFields(), program.delimiter||"|" ) )
-        .subscribe(console.log);
+    } else {
+        return from([]);
     }
  }
 

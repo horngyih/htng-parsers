@@ -82,7 +82,8 @@ function parseOccupancyRateUnits(occupancyRateUnit){
             { xDeparture : null === "true" },
             { xTA : null === "true" },
             { xOrg : null === "true" },
-            { messageType : "SetAvailabilityControl" }
+            { messageType : "SetAvailabilityControl" },
+            { unitID : getUnitId(occupancyRateUnit) }
         );
     }
     return Object.assign({}, {type:"SetMultipleOccupancyRates"}, result );
@@ -236,6 +237,15 @@ function getMinLOS(occupancyRateUnit){
     if( occupancyRateUnit ){
         if( occupancyRateUnit.MinNightStay ){
             return extractText(occupancyRateUnit.MinNightStay);
+        }
+    }
+    return null;
+}
+
+function getUnitId(occupancyRateUnit){
+    if( occupancyRateUnit ){
+        if( occupancyRateUnit.UnitId ){
+            return extractText(occupancyRateUnit.UnitId);
         }
     }
     return null;
