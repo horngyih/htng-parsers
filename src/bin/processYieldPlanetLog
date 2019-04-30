@@ -88,6 +88,60 @@ function mapMessageTypes( type ){
     return result;
 }
 
+//Handler for codeMap
+function loadCodeMapping(mappingFile){
+    if( typeof mappingFile === "string" ){
+        try{
+            program.codeMapping = require(mappingFile);
+       } catch(err){
+            //Attempt to load current directory
+            try{
+                program.codeMapping = require(path.join(process.cwd(),program.mapping));
+            }catch(err){
+            }
+        }
+    }
+    return mappingFile;
+}
+
+//Handler for propertyMap
+function loadPropertyMap()
+{
+    if( program.codeMapping ){
+        program.propertyMap = Object.keys(program.codeMapping).map(key=>{
+            let forward = {};
+            let reverse = {};
+            let partnerPropertyCode = key;
+            let propertyCode = program.codeMapping[key].PROPERTY;
+            forward[partnerPropertyCode] = propertyCode;
+                if( propertyCode ){
+                    reverse[propertyCode] = partnerPropertyCode;
+                }
+                return [ forward, reverse ];
+        }).reduce( (map, items)=>{
+            return Object.assign({}, map, ...items );
+        },{});
+     }
+}
+
+function mapPropertyCode(propertyCode){
+    if( program.propertyMap ){
+        return program.propertyMap[propertyCode] || propertyCode;
+    }
+    return propertyCode;
+}
+
+//Maps a given value for the specified type if code mapping is provided
+function mapValue( value, type, propertyCode ){
+    if( program.codeMapping ){
+        let codeMap = program.codeMapping[propertyCode]||program.codeMapping[mapPropertyCode(propertyCode)];
+        if( codeMap && codeMap[type] ){
+            return codeMap[type][value]||value;
+        }
+    }
+    return value;
+}
+
 //Returns a RXJS Filter function for Timestamp filtering
 function prepareTimestampFilter(){
     let from = program.from;
@@ -105,7 +159,7 @@ function prepareTimestampFilter(){
 //Returns a RXJS Filter function for Property Code filtering
 function preparePropertyCodeFilter(){
     if( program.propertyCode ){
-        let propertyCode= program.propertyCode;
+        let propertyCode=program.propertyCode;
         return filter(i=>{
             return i.propertyCode && i.propertyCode === propertyCode;
         });
@@ -179,6 +233,8 @@ function printHeader(){
 
 //Main Execution function -- process the files provided as a stream and output parsed results;
 function processLogs( files ){
+    loadCodeMapping(program.mapping);
+    loadPropertyMap();
     let targetFiles = [].concat(files);
     let filterPipe = prepareFilters();
     printHeader();
@@ -258,19 +314,7 @@ function processStream( stream ){
         partition(i=>i.messageType === "SetRatePlan")
     );
 
-    if( program.mapping ){
-        try{
-            program.codeMapping = require(program.mapping);
-        } catch(err){
-            //Attempt to load current directory
-            try{
-                program.codeMapping = require(path.join(process.cwd(),program.mapping));
-            }catch(err){
-            }
-        }
-    }
-
-    let targetStream = partitioned[1];
+   let targetStream = partitioned[1];
     switch( program.message ){
         case "SetRatePlan":
             targetStream = partitioned[0];
@@ -284,16 +328,11 @@ function processStream( stream ){
        return targetStream 
             .pipe( ...prepareFilters() )
             .pipe( map(i=>{ 
-                if( program.codeMapping ){
-                    propertyMap = program.codeMapping[i.propertyCode];
-                    if( propertyMap ){
-                        let propertyMapping = { propertyCode : propertyMap.PROPERTY||i.propertyCode};
-                        let roomMapping = { roomType : propertyMap.ROOM[i.roomType]||i.roomType };
-                        let rateMapping = { ratePlan : propertyMap.RATEPLAN[i.ratePlan]||i.ratePlan };
-                        return Object.assign({}, i, propertyMapping, roomMapping, rateMapping);
-                    }
-                }
-               return i;
+                let propertyCode = mapPropertyCode(i.propertyCode);
+                let mappedProperty = { propertyCode : propertyCode };
+                let mappedRoomType = { roomType : mapValue(i.roomType, "ROOM", i.propertyCode )};
+                let mappedRate = { ratePlan : mapValue(i.ratePlan, "RATEPLAN", i.propertyCode )};
+                return Object.assign({}, i, mappedProperty, mappedRoomType, mappedRate );
             } ) )
             .pipe( ...messageUtils.tabulateLine( messageTypes.SetMultipleOccupancyRates.formatters, getFields(), program.delimiter||"|" ) )
     } else {
@@ -316,7 +355,7 @@ program
 .option("-m, --message <value>", "Filter for Message Type", mapMessageTypes, "SetAvailabilityControl" )
 .option("-f, --from <value>", "Message sent after this timestamp", dateTimeParser )
 .option("-t, --to <value>", "Message sent before this timestamp", dateTimeParser )
-.option("--mapping <value>", "Mapping file" )
+.option("-M, --mapping <value>", "Mapping file" )
 .option("--tail", "Process stdin" )
 .action(
     (filename)=>{
