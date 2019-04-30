@@ -25,16 +25,18 @@ const idKey = /(?:ID:\s)(\d+)(?:\s)/; //Regular expression for extracting messag
 const messageFields = {
     "Common" : [
         "timestamp",
-        "requestID",
-        "unitID",
-        "errorID",
-        "status",
         "propertyCode",
         "ratePlan",
         "roomType",
         "startDate",
         "endDate"
     ],
+    "Correlated" : [
+        "requestID",
+        "unitID",
+        "errorID",
+        "status"
+     ],
     "SetRatePlan" : [
         "single",
         "doubleRate",
@@ -164,6 +166,9 @@ function prepareFilters(){
 function getFields(){
     let fields = [].concat(messageFields.Common);
     fields = fields.concat(messageFields[program.message]);
+    if( program.correlate ){
+        fields = fields.concat(messageFields.Correlated);
+    }
     return fields;
  }
 
@@ -191,9 +196,7 @@ function processStdin(){
     .subscribe(console.log);
 }
 
-// Process the steam of lines read and parse them for Availability/RatePlan messages for output
-function processStream( stream ){
-    let compacted = compact(lineStreamReader(stream),"INFO");
+function correlateMessages(compacted){
     correlated = correlate(compacted, line=>(line.match(idKey)||["","noID"])[1], 2 );
     let messagePatterns = [/inbound/i, /outbound/i];
     let messages = correlated.pipe(
@@ -237,6 +240,20 @@ function processStream( stream ){
         }),
         mergeAll()
     );
+    return messages;
+}
+
+function parseMessages(compacted){
+    return compacted.pipe(
+        ...messageUtils.parseXMLPipe(messageTypes),
+        filter(i=>i.type==="SetMultipleOccupancyRates")
+    );
+}
+
+// Process the steam of lines read and parse them for Availability/RatePlan messages for output
+function processStream( stream ){
+    let compacted = compact(lineStreamReader(stream),"INFO");
+    let messages = ( program.correlate )?correlateMessages(compacted):parseMessages(compacted);
     let partitioned = messages.pipe(
         partition(i=>i.messageType === "SetRatePlan")
     );
@@ -294,6 +311,7 @@ program
 .option("--rateCode <value>", "Filter by Rate Plan Code" )
 .option("--roomType <value>", "Filter by Room Type Code" )
 .option("--startDate <value>", "Filter by Start Date (on or after start date)", dateParser )
+.option("--correlate", "Correlate messages" )
 .option("--endDate <value>", "Filter be End Date ( on or before end date)", dateParser )
 .option("-m, --message <value>", "Filter for Message Type", mapMessageTypes, "SetAvailabilityControl" )
 .option("-f, --from <value>", "Message sent after this timestamp", dateTimeParser )
