@@ -9,8 +9,8 @@ BEGIN{
     timestamp="2019-"$2" "$3;
     echoToken="WISHNET-Update";
     propertyCode=substr($11,0,index($11,"|")-1);
-    ratePlan="ONL1";
     roomType=substr($15, 0, index($15, "|")-1);
+    ratePlan = roomType;
     startDate=substr($16, index($16,":")+1,10);
     endDate=substr($18, 0, 10);
     bookingLimit=substr($21, 0, index($21,"|")-1);

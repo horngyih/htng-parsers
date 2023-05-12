@@ -12,7 +12,8 @@
     "retrieveInterfaceCodeMapping": "src/bin/retrieveInterfaceCodeMapping",
     "parseSaveProductAllocations": "src/bin/parseSaveProductAllocations",
     "buferedReaer": "src/bin/bufferedReader",
-    "jscompact": "src/bin/jscompact"
+    "jscompact": "src/bin/jscompact",
+    "parseAsXml" : "src/bin/parseAsXml"
   },
   "author": "",
   "license": "ISC",
